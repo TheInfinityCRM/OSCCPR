@@ -6,12 +6,6 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "react-multi-carousel/lib/styles.css";
 import Image from "next/image";
-import grinch from "@assets/imgs/carousel/grinch.png";
-import batman from "@assets/imgs/carousel/batman.png";
-import myres from "@assets/imgs/carousel/myres.png";
-import waterslide from "@assets/imgs/carousel/waterslide.png";
-import jason from "@assets/imgs/carousel/jason.png";
-import vader from "@assets/imgs/carousel/vader.png";
 import Heading from "@components/heading";
 import Button from "@components/button";
 import { homeSlides } from "@data/waterslides";
@@ -24,68 +18,9 @@ import Card from "@components/card";
 import { FiPhone } from "react-icons/fi";
 import {SlLocationPin} from "react-icons/sl"
 import {MdEmail} from "react-icons/md"
+import { carouselItems } from "@data/carousel";
 
-const carouselItems = [
-  {
-    id: 1,
-    image: grinch,
-    tagline: (
-      <>
-        Hire <span className="text-yellow-600">Grinch</span> for your next
-        party!
-      </>
-    ),
-  },
-  {
-    id: 2,
-    image: batman,
-    tagline: (
-      <>
-        Hire <span className="text-yellow-600">Batman</span> for your next
-        party!
-      </>
-    ),
-  },
-  {
-    id: 3,
-    image: myres,
-    tagline: (
-      <>
-        Hire <span className="text-yellow-600">Micheal Myres</span> for your
-        next party!
-      </>
-    ),
-  },
-  {
-    id: 4,
-    image: waterslide,
-    tagline: (
-      <>
-        Book <span className="text-yellow-600">Water slide</span> for your next
-        party!
-      </>
-    ),
-  },
-  {
-    id: 5,
-    image: jason,
-    tagline: (
-      <>
-        Hire <span className="text-yellow-600">Jason</span> for your next party!
-      </>
-    ),
-  },
-  {
-    id: 6,
-    image: vader,
-    tagline: (
-      <>
-        Hire <span className="text-yellow-600">Darth Vader</span> for your next
-        party!{" "}
-      </>
-    ),
-  },
-];
+
 
 const Home: NextPageWithLayout = () => {
   const [slidesData, setShowSlidesData] = React.useState<number>(0);
@@ -94,7 +29,11 @@ const Home: NextPageWithLayout = () => {
   );
 
   const handleAccordionClick = (index: number) => {
-    setActiveAccordion(index);
+    if (index === activeAccordion) {
+      setActiveAccordion(null);
+    } else {
+      setActiveAccordion(index);
+    }
   };
 
   return (
@@ -171,7 +110,7 @@ const Home: NextPageWithLayout = () => {
             </div>
           </div>
           <div id="water slides and bounce houses">
-            <div className="flex justify-center items-center py-6">
+            <div className="flex justify-center text-center items-center py-6">
               <Heading title="Water Slides &amp; Bounce Houses" />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 py-6">
@@ -242,7 +181,7 @@ const Home: NextPageWithLayout = () => {
           </div>
           <div id="FAQ">
             <div className="flex justify-center items-center py-6">
-              <Heading title="Events We Cater To..." />
+              <Heading title="Have a question?" />
             </div>
             <div className="grid gap-y-2 pb-20">
               {accordion.map((value, index) => (
@@ -260,7 +199,7 @@ const Home: NextPageWithLayout = () => {
             <div className="flex justify-center items-center">
               <h3 className="text-white text-2xl font-montserrat">Success</h3>
             </div>
-            <div className="flex justify-center items-center py-3">
+            <div className="flex justify-center text-center items-center py-3">
               <Heading title="Don't just take our word for it..." />
             </div>
             <div className="flex h-52 justify-center items-center text-white">

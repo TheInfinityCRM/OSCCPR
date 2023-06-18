@@ -1,12 +1,21 @@
-import rental01 from '@assets/imgs/rentals/rental01.png'
-import rental02 from '@assets/imgs/rentals/rental02.png'
-import rental03 from '@assets/imgs/rentals/rental03.png'
-import rental04 from '@assets/imgs/rentals/rental04.png'
-import rental05 from '@assets/imgs/rentals/rental05.png'
-import rental06 from '@assets/imgs/rentals/rental06.png'
-import rental07 from '@assets/imgs/rentals/rental07.png'
-import rental08 from '@assets/imgs/rentals/rental08.png'
+import rental01 from '@assets/imgs/rentals/Two Lane Racing Slide.png'
+import rental02 from '@assets/imgs/rentals/Kids Bounce House.png'
+import rental03 from '@assets/imgs/rentals/Bounce House With Slide.png'
+import rental04 from '@assets/imgs/rentals/Obstical Racing Slide.png'
+import rental05 from '@assets/imgs/rentals/Unicorn Bounce House.png'
+import rental06 from '@assets/imgs/rentals/Amazon Racing Slide.png'
+import rental07 from '@assets/imgs/rentals/Penis Ice Luge.png'
+import rental08 from '@assets/imgs/rentals/Boob Ice Luge.png'
 
+
+const category = {
+    1:"Normal",
+    2:"Adult",
+}
+const status = {
+    1:"Available",
+    2:"Sold Out"
+}
 
 export const rentalItems = [
     {
@@ -15,8 +24,8 @@ export const rentalItems = [
         name:'Two Lane Racing Slide',
         price:'$500.00',
         detailUrl:'',
-        category:"Normal",
-        status:"Available"
+        category:category[1],
+        status:status[1]
     },
     {
         id:2,
@@ -24,8 +33,8 @@ export const rentalItems = [
         name:'Kids Bounce House',
         price:'$500.00',
         detailUrl:'',
-        category:"Normal",
-        status:"Available"
+        category:category[1],
+        status:status[1]
     },
     {
         id:3,
@@ -33,8 +42,8 @@ export const rentalItems = [
         name:'Bounce House With Slide',
         price:'$500.00',
         detailUrl:'',
-        category:"Normal",
-        status:"Available"
+        category:category[1],
+        status:status[1]
     },
     {
         id:4,
@@ -42,8 +51,8 @@ export const rentalItems = [
         name:'Obstical Racing Slide',
         price:'$500.00',
         detailUrl:'',
-        category:"Normal",
-        status:"Sold Out"
+        category:category[1],
+        status:status[2]
     },
     {
         id:5,
@@ -51,8 +60,8 @@ export const rentalItems = [
         name:'Unicorn Bounce House',
         price:'$500.00',
         detailUrl:'',
-        category:"Normal",
-        status:"Sold Out"
+        category:category[1],
+        status:status[2]
     },
     {
         id:6,
@@ -60,8 +69,8 @@ export const rentalItems = [
         name:'Amazon Racing Slide',
         price:'$500.00',
         detailUrl:'',
-        category:"Normal",
-        status:"Sold Out"
+        category:category[1],
+        status:status[2]
     },
     {
         id:7,
@@ -69,8 +78,8 @@ export const rentalItems = [
         name:'Penis Ice Luge',
         price:'$500.00',
         detailUrl:'',
-        category:"Adult",
-        status:"Available"
+        category:category[2],
+        status:status[1]
     },
     {
         id:8,
@@ -78,8 +87,8 @@ export const rentalItems = [
         name:'Boob Ice Luge',
         price:'$500.00',
         detailUrl:'',
-        category:"Adult",
-        status:"Available"
+        category:category[2],
+        status:status[1]
     }
     
 ]

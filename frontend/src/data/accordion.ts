@@ -21,7 +21,7 @@ export const accordion = [
     },
     {
         id:5,
-        question:'How far in advance should I book a costume character?',
+        question:'Do you offer party rentals besides costume characters?',
         answer:'How far in advance should I book a costume character. How far in advance should I book a costume character. How far in advance should I book a costume character'
     },
 ]

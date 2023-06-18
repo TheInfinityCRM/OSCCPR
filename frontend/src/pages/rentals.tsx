@@ -6,13 +6,13 @@ import ClientLayout from "@layouts/clientLayout/clientLayout";
 import Head from "next/head";
 import { AiOutlineClose } from "react-icons/ai";
 import { FiFilter } from "react-icons/fi";
-import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io'
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
 const Rentals = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [adultItems, setAdultItems] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
-  const itemsPerPage = 6;
+  const itemsPerPage = 8;
 
   const filteredItems = rentalItems
     .filter((val) => {
@@ -54,14 +54,14 @@ const Rentals = () => {
       <div className="py-6 bg-black">
         <div className="container text-white mt-24">
           <div className="grid grid-cols-12">
-            <div className="col-span-12 md:col-span-2">
+            <div className="col-span-12 xl:col-span-2">
               <button
                 onClick={() => setAdultItems((prevState) => !prevState)}
                 className={`border-2 rounded-md xl:my-6 ${
                   adultItems
                     ? "border-[#FFCB05] text-[#FFCB05]"
                     : "border-white text-white"
-                } w-40 md:ml-6 py-2  flex items-center justify-center`}
+                } w-40 xl:ml-6 py-2  flex items-center justify-center`}
               >
                 {adultItems ? (
                   <AiOutlineClose color="#FFCB05" size={18} />
@@ -71,7 +71,7 @@ const Rentals = () => {
                 18+ Rentals
               </button>
             </div>
-            <div className="col-span-12 md:col-span-10">
+            <div className="col-span-12 xl:col-span-10">
               <div className="text-2xl flex ml-auto mt-4 xl:my-6 mb-12">
                 <label htmlFor="simple-search" className="sr-only">
                   Search
@@ -115,7 +115,7 @@ const Rentals = () => {
                 rentalName={item.name}
                 rentalPrice={item.price}
                 rentalUrl={item.detailUrl}
-                rentalStatus= {item.status}
+                rentalStatus={item.status}
               />
             ))}
           </div>
@@ -123,8 +123,8 @@ const Rentals = () => {
             previousLabel={<IoIosArrowBack />}
             nextLabel={<IoIosArrowForward />}
             breakLabel={"..."}
-            previousLinkClassName={'pagination-previous'}
-            nextLinkClassName={'pagination-next'}
+            previousLinkClassName={"pagination-previous"}
+            nextLinkClassName={"pagination-next"}
             breakClassName={"break-me"}
             pageCount={totalPages}
             marginPagesDisplayed={2}

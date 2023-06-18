@@ -59,7 +59,7 @@ const Navbar = () => {
                   <span
                     className={`${
                       active === value.href
-                        ? "border-b-2 py-1 border-[#DCCA87]"
+                        ? "border-b-2 py-1 border-[#FFFFFF]"
                         : ""
                     } nav-link`}
                   >

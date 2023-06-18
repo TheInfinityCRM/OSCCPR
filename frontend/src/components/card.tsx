@@ -1,8 +1,7 @@
 import { ICardProps } from "@customTypes/components";
 import React from "react";
 import Image from "next/image";
-import rental01 from "@assets/imgs/rentals/rental01.png";
-import rental from "@assets/imgs/rentals/rental01.png";
+import rental from "@assets/imgs/rentals/Two Lane Racing Slide.png";
 import Button from "./button";
 import Link from "next/link";
 
@@ -32,7 +31,7 @@ const Card: React.FC<ICardProps> = ({
           <div className="grid grid-cols-1 place-items-center gap-y-4 py-6 rounded-lg bg-gradient-to-b from-black to-gray-800">
             <div className="relative">
               <Image
-                src={rentalImg || rental01}
+                src={rentalImg || rental}
                 alt={rentalName || "Rental"}
                 className={`${
                   rentalStatus === "Sold Out" ? "opacity-25" : ""
