@@ -16,11 +16,9 @@ import Accordion from "@components/accordion";
 import { accordion } from "@data/accordion";
 import Card from "@components/card";
 import { FiPhone } from "react-icons/fi";
-import {SlLocationPin} from "react-icons/sl"
-import {MdEmail} from "react-icons/md"
+import { SlLocationPin } from "react-icons/sl";
+import { MdEmail } from "react-icons/md";
 import { carouselItems } from "@data/carousel";
-
-
 
 const Home: NextPageWithLayout = () => {
   const [slidesData, setShowSlidesData] = React.useState<number>(0);
@@ -40,7 +38,10 @@ const Home: NextPageWithLayout = () => {
     <>
       <Head>
         <title>Home</title>
-        <meta name="description" content="Welcome to Ocean State Costume Characters and Party Rentals, your hub for extraordinary celebrations." />
+        <meta
+          name="description"
+          content="Welcome to Ocean State Costume Characters and Party Rentals, your hub for extraordinary celebrations."
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -53,6 +54,8 @@ const Home: NextPageWithLayout = () => {
           showIndicators={true}
           showArrows={false}
           stopOnHover={false}
+          preventMovementUntilSwipeScrollTolerance={true}
+          swipeScrollTolerance={50}
         >
           {carouselItems.map((item) => (
             <div key={item.id}>
@@ -160,20 +163,17 @@ const Home: NextPageWithLayout = () => {
                   key={value.id}
                   className={`${value.id === 3 ? "col-span-2" : "col-span-1"}`}
                 >
-                  <Link
-                    href={"/"}
-                    className="relative"
-                  >
+                  <Link href={"/"} className="relative">
                     <Image
                       src={value.Image}
                       alt={value.alt}
                       className='"bg-black object-cover overflow-hidden hover:opacity-70 hover:transition hover:ease-in-out hover:duration-300'
                     />
-                      <>
-                        <p className="absolute text-[#FFCB05] font-semibold font-roboto text-2xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                          {value.title} ➧
-                        </p>
-                      </>
+                    <>
+                      <p className="absolute text-[#FFCB05] font-semibold font-roboto text-2xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                        {value.title} ➧
+                      </p>
+                    </>
                   </Link>
                 </div>
               ))}
