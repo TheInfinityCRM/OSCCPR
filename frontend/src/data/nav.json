@@ -16,12 +16,12 @@
     },
     {
         "id":3,
-        "href":"/faq",
+        "href":"/#faq",
         "item":"FAQ"
     },
     {
         "id":4,
-        "href":"/contact",
+        "href":"/#contact",
         "item":"CONTACT"
     }
 ]

@@ -9,11 +9,11 @@ const Footer = () => {
     <footer className="w-full bg-black relative  bottom-0">
       <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 place-items-center gap-8 text-white  py-16">
         <div>
-          <Image src={logo} alt={"logo"}  />
+          <Link href={'/'}><Image src={logo} alt={"logo"}  /></Link>
         </div>
-        <Link href={''}>REFUND POLICY</Link>
-        <Link href={''}>PRIVACY POLICY</Link>
-        <Link href={''}>TERMS OF SERVICE</Link>
+        <Link href={'/refund-policy'}>REFUND POLICY</Link>
+        <Link href={'/privacy-policy'}>PRIVACY POLICY</Link>
+        <Link href={'/terms-of-service'}>TERMS OF SERVICE</Link>
         <div className="flex space-x-4">
           <Link href="">
             <FiInstagram size={24} />

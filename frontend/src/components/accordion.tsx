@@ -31,7 +31,7 @@ const Accordion: React.FC<IAccordionProps> = ({ active, question, answer }) => {
             active ? "rounded-b-lg transition" : ""
           } bg-gradient-to-b from-black to-gray-800`}
         >
-          <p className="text-sm">{answer}</p>
+          <p className="text-base">{answer}</p>
         </div>
       )}
     </div>

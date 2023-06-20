@@ -47,7 +47,7 @@ const Navbar = () => {
         <div className="flex justify-start items-center">
           <Link href="/">
             <span>
-              <Image src={logo} width={100}  alt="" />
+              <Image src={logo} width={200}  alt="" />
             </span>
           </Link>
         </div>

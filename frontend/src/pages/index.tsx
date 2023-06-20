@@ -13,7 +13,7 @@ import React from "react";
 import Link from "next/link";
 import { events } from "@data/events";
 import Accordion from "@components/accordion";
-import { accordion } from "@data/accordion";
+import { faqs } from "@data/faqs";
 import Card from "@components/card";
 import { FiPhone } from "react-icons/fi";
 import { SlLocationPin } from "react-icons/sl";
@@ -128,23 +128,39 @@ const Home: NextPageWithLayout = () => {
                     <Image
                       src={value.Image}
                       alt={value.alt}
-                      className="bg-black object-cover overflow-hidden hover:opacity-70 hover:transition hover:ease-in-out hover:duration-300"
+                      className="bg-black object-cover overflow-hidden hover:opacity-40 hover:transition hover:ease-in-out hover:duration-300"
                     />
                   </Link>
-                    <>
-                      <p className={`absolute ${slidesData === value.id?"":"block md:hidden"} text-white font-semibold font-roboto text-2xl top-2 left-2`}>
-                        {value.title}
-                      </p>
-                      <p className={`absolute ${slidesData === value.id?"":"block md:hidden"} bottom-6 left-0 mb-2 ml-2 text-white text-sm font-roboto`}>
-                        One day Rental: {value.oneDayRent}
-                      </p>
-                      <p className={`absolute ${slidesData === value.id?"":"block md:hidden"} bottom-1 left-0 mb-2 ml-2 text-white text-sm font-roboto`}>
-                        Two day Rental: {value.twoDayRent}
-                      </p>
-                      <p className={`absolute ${slidesData === value.id?"":"block md:hidden"} bottom-1 right-3 mb-2 ml-2 text-[#FFCB05] text-sm font-roboto`}>
-                        View more ➧
-                      </p>
-                    </>
+                  <>
+                    <p
+                      className={`absolute ${
+                        slidesData === value.id ? "" : "block md:hidden"
+                      } text-white font-semibold font-roboto text-2xl top-2 left-2`}
+                    >
+                      {value.title}
+                    </p>
+                    <p
+                      className={`absolute ${
+                        slidesData === value.id ? "" : "block md:hidden"
+                      } bottom-6 left-0 mb-2 ml-2 text-white text-sm font-roboto`}
+                    >
+                      One day Rental: {value.oneDayRent}
+                    </p>
+                    <p
+                      className={`absolute ${
+                        slidesData === value.id ? "" : "block md:hidden"
+                      } bottom-1 left-0 mb-2 ml-2 text-white text-sm font-roboto`}
+                    >
+                      Two day Rental: {value.twoDayRent}
+                    </p>
+                    <p
+                      className={`absolute ${
+                        slidesData === value.id ? "" : "block md:hidden"
+                      } bottom-1 right-3 mb-2 ml-2 text-[#FFCB05] text-sm font-roboto`}
+                    >
+                      View more ➧
+                    </p>
+                  </>
                 </div>
               ))}
             </div>
@@ -157,31 +173,32 @@ const Home: NextPageWithLayout = () => {
               {events.map((value) => (
                 <div
                   key={value.id}
-                  className={`${value.id === 3 ? "col-span-1 md:col-span-2" : "col-span-1"}`}
+                  className={`${
+                    value.id === 3 ? "col-span-1 md:col-span-2" : "col-span-1"
+                  }`}
                 >
-                  <Link href={"/"} className="relative">
-                    <Image
-                      src={value.Image}
-                      alt={value.alt}
-                      className='bg-black object-cover h-80 overflow-hidden opacity-70 hover:opacity-50 hover:transition hover:ease-in-out hover:duration-300'
-                    />
-                    <>
-                      <p className="absolute text-[#FFCB05] font-semibold font-roboto text-2xl top-1/2 left-1/2 "> 
-                      {/* transform -translate-x-1/2 -translate-y-1/2 */}
-                        {value.title} ➧
-                      </p>
-                    </>
-                  </Link>
+                    <Link href={"/"} className='relative'>
+                      <Image
+                        src={value.Image}
+                        alt={value.alt}
+                        className="bg-black object-cover h-80 overflow-hidden opacity-70  hover:transition hover:ease-in-out hover:duration-300"
+                      />
+                      <>
+                        <p className="absolute text-[#FFCB05] font-semibold font-roboto hover:transform hover:-translate-y-3 hover:transition hover:ease-in-out hover:delay-150 text-2xl inset-0 flex flex-col items-center justify-center">
+                          {value.title} ➧
+                        </p>
+                      </>
+                    </Link>
                 </div>
               ))}
             </div>
           </div>
-          <div id="FAQ">
+          <section id="faq">
             <div className="flex justify-center items-center py-6">
               <Heading title="Have a question?" />
             </div>
             <div className="grid gap-y-2 pb-20">
-              {accordion.map((value, index) => (
+              {faqs.map((value, index) => (
                 <div key={value.id} onClick={() => handleAccordionClick(index)}>
                   <Accordion
                     active={index === activeAccordion}
@@ -191,7 +208,7 @@ const Home: NextPageWithLayout = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </section>
           <div id="reviews">
             <div className="flex justify-center items-center">
               <h3 className="text-white text-2xl font-montserrat">Success</h3>
@@ -203,14 +220,33 @@ const Home: NextPageWithLayout = () => {
               Google Reviews
             </div>
           </div>
-          <div id="contactUs">
+          <section id="contact">
             <div className="flex justify-center items-center py-6">
               <Heading title="Get in touch..." />
             </div>
-            <div className="flex justify-center items-center pb-6">
+            <div className="flex justify-center items-center">
               <h3 className="text-white text-lg text-center md:text-2xl font-montserrat font-semibold">
                 Fill out this form to inquire about out services!
               </h3>
+            </div>
+            <div className="py-2 flex justify-center items-center">
+            <iframe
+                src="https://api.leadconnectorhq.com/widget/form/ai1gyJlD8zQcumUrRque"
+                className="w-[100vh] h-[120vh] text-white"
+                id="inline-ai1gyJlD8zQcumUrRque"
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="Contact Form"
+                data-height="567"
+                data-layout-iframe-id="inline-ai1gyJlD8zQcumUrRque"
+                data-form-id="ai1gyJlD8zQcumUrRque"
+                title="Contact Form"
+              ></iframe>
             </div>
             <div className="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-6">
               <Card
@@ -232,7 +268,7 @@ const Home: NextPageWithLayout = () => {
                 contact={"info@osccpr.com"}
               />
             </div>
-          </div>
+          </section>
         </div>
       </div>
     </>
