@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="w-full bg-black relative  bottom-0">
       <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 place-items-center gap-8 text-white  py-16">
         <div>
-          <Image src={logo} alt={"logo"} />
+          <Image src={logo} alt={"logo"}  />
         </div>
         <Link href={''}>REFUND POLICY</Link>
         <Link href={''}>PRIVACY POLICY</Link>

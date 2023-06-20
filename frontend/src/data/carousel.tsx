@@ -11,7 +11,7 @@ export const carouselItems = [
       image: grinch,
       tagline: (
         <>
-          Hire <span className="text-yellow-600">Grinch</span> for your next
+          Hire <span className="text-[#FFCB05]">Grinch</span> for your next
           party!
         </>
       ),
@@ -21,7 +21,7 @@ export const carouselItems = [
       image: batman,
       tagline: (
         <>
-          Hire <span className="text-yellow-600">Batman</span> for your next
+          Hire <span className="text-[#FFCB05]">Batman</span> for your next
           party!
         </>
       ),
@@ -31,7 +31,7 @@ export const carouselItems = [
       image: myres,
       tagline: (
         <>
-          Hire <span className="text-yellow-600">Micheal Myres</span> for your
+          Hire <span className="text-[#FFCB05]">Micheal Myres</span> for your
           next party!
         </>
       ),
@@ -41,7 +41,7 @@ export const carouselItems = [
       image: waterslide,
       tagline: (
         <>
-          Book <span className="text-yellow-600">Water slide</span> for your next
+          Book <span className="text-[#FFCB05]">Water slide</span> for your next
           party!
         </>
       ),
@@ -51,7 +51,7 @@ export const carouselItems = [
       image: jason,
       tagline: (
         <>
-          Hire <span className="text-yellow-600">Jason</span> for your next party!
+          Hire <span className="text-[#FFCB05]">Jason</span> for your next party!
         </>
       ),
     },
@@ -60,7 +60,7 @@ export const carouselItems = [
       image: vader,
       tagline: (
         <>
-          Hire <span className="text-yellow-600">Darth Vader</span> for your next
+          Hire <span className="text-[#FFCB05]">Darth Vader</span> for your next
           party!{" "}
         </>
       ),

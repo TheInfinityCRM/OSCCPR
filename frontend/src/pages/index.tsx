@@ -97,7 +97,7 @@ const Home: NextPageWithLayout = () => {
             <div className="flex justify-center items-center py-6">
               <Heading title="About Us" />
             </div>
-            <p className="text-white font-montserrat leading-7 mx-6 py-6">
+            <p className="text-white font-montserrat leading-7 mx-6 py-6 text-justify">
               Welcome to Ocean State Costume Characters and Party Rentals, your
               hub for extraordinary celebrations. We specialize in sprinkling
               magic on your events with our range of high quality costume
@@ -128,27 +128,23 @@ const Home: NextPageWithLayout = () => {
                     <Image
                       src={value.Image}
                       alt={value.alt}
-                      className="bg-black object-cover overflow-hidden hover:opacity-60 hover:transition hover:ease-in-out hover:duration-300"
+                      className="bg-black object-cover overflow-hidden hover:opacity-70 hover:transition hover:ease-in-out hover:duration-300"
                     />
                   </Link>
-                  {slidesData === value.id ? (
                     <>
-                      <p className="absolute text-white font-semibold font-roboto text-2xl top-2 left-2">
+                      <p className={`absolute ${slidesData === value.id?"":"block md:hidden"} text-white font-semibold font-roboto text-2xl top-2 left-2`}>
                         {value.title}
                       </p>
-                      <p className="absolute bottom-6 left-0 mb-2 ml-2 text-white text-sm font-roboto">
+                      <p className={`absolute ${slidesData === value.id?"":"block md:hidden"} bottom-6 left-0 mb-2 ml-2 text-white text-sm font-roboto`}>
                         One day Rental: {value.oneDayRent}
                       </p>
-                      <p className="absolute bottom-1 left-0 mb-2 ml-2 text-white text-sm font-roboto">
+                      <p className={`absolute ${slidesData === value.id?"":"block md:hidden"} bottom-1 left-0 mb-2 ml-2 text-white text-sm font-roboto`}>
                         Two day Rental: {value.twoDayRent}
                       </p>
-                      <p className="absolute bottom-1 right-3 mb-2 ml-2 text-[#FFCB05] text-sm font-roboto">
+                      <p className={`absolute ${slidesData === value.id?"":"block md:hidden"} bottom-1 right-3 mb-2 ml-2 text-[#FFCB05] text-sm font-roboto`}>
                         View more ➧
                       </p>
                     </>
-                  ) : (
-                    <></>
-                  )}
                 </div>
               ))}
             </div>
@@ -157,17 +153,17 @@ const Home: NextPageWithLayout = () => {
             <div className="flex justify-center items-center py-6">
               <Heading title="Events We Cater To..." />
             </div>
-            <div className="grid grid-cols-2 py-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 py-6">
               {events.map((value) => (
                 <div
                   key={value.id}
-                  className={`${value.id === 3 ? "col-span-2" : "col-span-1"}`}
+                  className={`${value.id === 3 ? "col-span-1 md:col-span-2" : "col-span-1"}`}
                 >
                   <Link href={"/"} className="relative">
                     <Image
                       src={value.Image}
                       alt={value.alt}
-                      className='"bg-black object-cover overflow-hidden hover:opacity-70 hover:transition hover:ease-in-out hover:duration-300'
+                      className='"bg-black object-cover h-80 overflow-hidden opacity-70 hover:opacity-50 hover:transition hover:ease-in-out hover:duration-300'
                     />
                     <>
                       <p className="absolute text-[#FFCB05] font-semibold font-roboto text-2xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">

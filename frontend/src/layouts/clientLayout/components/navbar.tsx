@@ -41,13 +41,13 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 w-full z-50 ${
-      scrolled ? 'bg-black' : ''
+      scrolled ? 'bg-black' : 'bg-black lg:bg-transparent'
     }`}>
       <div className="flex px-4">
         <div className="flex justify-start items-center">
           <Link href="/">
             <span>
-              <Image src={logo} width={200} alt="" />
+              <Image src={logo} width={100}  alt="" />
             </span>
           </Link>
         </div>

@@ -1,6 +1,6 @@
-import kidsevents from '@assets/imgs/kidsevents.png'
-import plusevents from '@assets/imgs/18plusevents.png'
-import allevents from '@assets/imgs/allevents.png'
+import kidsevents from '@assets/imgs/kidsevents.jpeg'
+import plusevents from '@assets/imgs/18plusevents.jpeg'
+import allevents from '@assets/imgs/allevents.jpeg'
 
 export const events = [
     {id:1, Image:kidsevents, alt:'event 1', title:'Kids events'},
