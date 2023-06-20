@@ -166,7 +166,8 @@ const Home: NextPageWithLayout = () => {
                       className='bg-black object-cover h-80 overflow-hidden opacity-70 hover:opacity-50 hover:transition hover:ease-in-out hover:duration-300'
                     />
                     <>
-                      <p className="absolute text-[#FFCB05] font-semibold font-roboto text-2xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                      <p className="absolute text-[#FFCB05] font-semibold font-roboto text-2xl top-1/2 left-1/2 "> 
+                      {/* transform -translate-x-1/2 -translate-y-1/2 */}
                         {value.title} ➧
                       </p>
                     </>
