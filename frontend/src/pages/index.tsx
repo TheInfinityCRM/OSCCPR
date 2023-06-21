@@ -173,21 +173,21 @@ const Home: NextPageWithLayout = () => {
               {events.map((value) => (
                 <div
                   key={value.id}
-                  className={`${
+                  className={` relative ${
                     value.id === 3 ? "col-span-1 md:col-span-2" : "col-span-1"
                   }`}
                 >
-                    <Link href={"/"} className='relative'>
+                    <Link href={"/"}>
                       <Image
                         src={value.Image}
                         alt={value.alt}
                         className="bg-black object-cover h-80 overflow-hidden opacity-70  hover:transition hover:ease-in-out hover:duration-300"
                       />
-                      <>
-                        <p className="absolute text-[#FFCB05] font-semibold font-roboto hover:transform hover:-translate-y-3 hover:transition hover:ease-in-out hover:delay-150 text-2xl inset-0 flex flex-col items-center justify-center">
+                      <div className="absolute">
+                        <p className="text-[#FFCB05] font-semibold font-roboto hover:transform hover:-translate-y-3 hover:transition hover:ease-in-out hover:delay-150 text-2xl inset-0 flex flex-col items-center justify-center">
                           {value.title} ➧
                         </p>
-                      </>
+                      </div>
                     </Link>
                 </div>
               ))}
