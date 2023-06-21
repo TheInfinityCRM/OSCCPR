@@ -92,7 +92,7 @@ export const rentalItems = [
     {
         id:7,
         image:rental07,
-        name:'Penis Ice Luge',
+        name:'XXX Ice Luge',
         price:'$500.00',
         twoDayRental:'$700.00',
         bookingImg:rental07,
@@ -103,7 +103,7 @@ export const rentalItems = [
     {
         id:8,
         image:rental08,
-        name:'Boob Ice Luge',
+        name:'XXX Ice Luge',
         price:'$500.00',
         twoDayRental:'$700.00',
         bookingImg:rental08,

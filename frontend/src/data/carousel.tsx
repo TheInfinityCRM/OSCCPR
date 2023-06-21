@@ -11,7 +11,7 @@ export const carouselItems = [
       image: grinch,
       tagline: (
         <>
-          Hire <span className="text-[#FFCB05]">Grinch</span> for your next
+          Hire <span className="text-[#FFCB05]">The Grinch</span> for your next
           party!
         </>
       ),
@@ -41,7 +41,7 @@ export const carouselItems = [
       image: waterslide,
       tagline: (
         <>
-          Book <span className="text-[#FFCB05]">Water slide</span> for your next
+          Book <span className="text-[#FFCB05]">Inflatables</span> for your next
           party!
         </>
       ),
