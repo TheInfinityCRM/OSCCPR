@@ -11,20 +11,23 @@ import Button from "@components/button";
 import { homeSlides } from "@data/waterslides";
 import React from "react";
 import Link from "next/link";
-import { events } from "@data/events";
+import { eventDetail, events } from "@data/events";
 import Accordion from "@components/accordion";
 import { faqs } from "@data/faqs";
 import Card from "@components/card";
-import { FiPhone } from "react-icons/fi";
+import { FiArrowLeft, FiPhone } from "react-icons/fi";
 import { SlLocationPin } from "react-icons/sl";
 import { MdEmail } from "react-icons/md";
 import { carouselItems } from "@data/carousel";
+import Modal from "@components/modal";
 
 const Home: NextPageWithLayout = () => {
   const [slidesData, setShowSlidesData] = React.useState<number>(0);
   const [activeAccordion, setActiveAccordion] = React.useState<number | null>(
     null
   );
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
+  const [title, setTitle] = React.useState({ id: 0, title: "" });
 
   const handleAccordionClick = (index: number) => {
     if (index === activeAccordion) {
@@ -32,6 +35,14 @@ const Home: NextPageWithLayout = () => {
     } else {
       setActiveAccordion(index);
     }
+  };
+  const openModal = (value: any) => {
+    setTitle(value);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
@@ -43,7 +54,7 @@ const Home: NextPageWithLayout = () => {
           content="Welcome to Ocean State Costume Characters and Party Rentals, your hub for extraordinary celebrations."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <div className="max-h-screen overflow-hidden relative bg-black">
         <Carousel
@@ -124,7 +135,7 @@ const Home: NextPageWithLayout = () => {
                   onMouseEnter={() => setShowSlidesData(value.id)}
                   onMouseLeave={() => setShowSlidesData(0)}
                 >
-                  <Link href={"/"}>
+                  <Link href={"/rentals"}>
                     <Image
                       src={value.Image}
                       alt={value.alt}
@@ -177,18 +188,18 @@ const Home: NextPageWithLayout = () => {
                     value.id === 3 ? "col-span-1 md:col-span-2" : "col-span-1"
                   }`}
                 >
-                    <Link href={"/"}>
-                      <Image
-                        src={value.Image}
-                        alt={value.alt}
-                        className="bg-black object-cover h-80 overflow-hidden opacity-70  hover:transition hover:ease-in-out hover:duration-300"
-                      />
-                      <div className="absolute inset-0 flex items-center justify-center hover:transform hover:-translate-y-3 hover:transition hover:ease-in-out hover:delay-150">
-                        <p className="text-[#FFCB05] font-semibold font-roboto  text-2xl">
-                          {value.title} ➧
-                        </p>
-                      </div>
-                    </Link>
+                  <div onClick={() => openModal(value)}>
+                    <Image
+                      src={value.Image}
+                      alt={value.alt}
+                      className="bg-black object-cover h-80 overflow-hidden opacity-70  hover:transition hover:ease-in-out hover:duration-300"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center hover:transform hover:-translate-y-3 hover:transition hover:ease-in-out hover:delay-150">
+                      <p className="text-[#FFCB05] font-semibold font-roboto  text-2xl">
+                        {value.title} ➧
+                      </p>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
@@ -230,7 +241,7 @@ const Home: NextPageWithLayout = () => {
               </h3>
             </div>
             <div className="py-2 flex justify-center items-center">
-            <iframe
+              <iframe
                 src="https://api.leadconnectorhq.com/widget/form/ai1gyJlD8zQcumUrRque"
                 className="w-[100vh] h-[120vh] text-white"
                 id="inline-ai1gyJlD8zQcumUrRque"
@@ -270,6 +281,56 @@ const Home: NextPageWithLayout = () => {
             </div>
           </section>
         </div>
+      </div>
+      <div>
+        <Modal isOpen={isModalOpen}>
+          <div onClick={closeModal}>
+            <p className="flex items-center font-montserrat text-sm cursor-pointer">
+              <FiArrowLeft size={20} className="text-[#FFCB05]" /> GO BACK
+            </p>
+          </div>
+          <div className="flex items-center justify-center my-3">
+            <h2 className="text-2xl text-[#FFCB05] border-b-2 mb-6 border-[#FFCB05] font-bold font-montserrat">
+              {title?.title}
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-12">
+            {eventDetail
+              .filter((val) =>
+                title.title === "All Events"
+                  ? val
+                  : val.category === title.title
+              )
+              .map((value) => (
+                <div key={value.id}>
+                  <Card
+                    type={"events"}
+                    eventName={value.name}
+                    eventImg={value.image}
+                  />
+                </div>
+              ))}
+          </div>
+          <div className="py-2 flex justify-center items-center">
+              <iframe
+                src="https://api.leadconnectorhq.com/widget/form/ai1gyJlD8zQcumUrRque"
+                className="w-[100vh] h-[120vh] xl:h-[128vh] text-white"
+                id="inline-ai1gyJlD8zQcumUrRque"
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="Contact Form"
+                data-height="567"
+                data-layout-iframe-id="inline-ai1gyJlD8zQcumUrRque"
+                data-form-id="ai1gyJlD8zQcumUrRque"
+                title="Contact Form"
+              ></iframe>
+            </div>
+        </Modal>
       </div>
     </>
   );

@@ -8,12 +8,12 @@ const Tos: NextPageWithLayout = () => {
     <>
       <Head>
         <title>Terms of Service</title>
-        <meta
+        <meta 
           name="description"
           content="Welcome to Ocean State Costume Characters and Party Rentals, your hub for extraordinary celebrations."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <div className="bg-black">
         <div className="container">

@@ -30,7 +30,7 @@ const Costumes = () => {
           content="Welcome to Ocean State Costume Characters and Party Rentals, your hub for extraordinary celebrations."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <div className="py-6 bg-black">
         <div className="container text-white">

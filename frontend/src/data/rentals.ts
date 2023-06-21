@@ -7,6 +7,11 @@ import rental06 from '@assets/imgs/rentals/Amazon Racing Slide.png'
 import rental07 from '@assets/imgs/rentals/Penis Ice Luge.png'
 import rental08 from '@assets/imgs/rentals/Boob Ice Luge.png'
 
+import rental01Booking from '@assets/imgs/rentalBooking/Two Lane Racing Slide.png'
+import rental02Booking from '@assets/imgs/rentalBooking/Kids Bounce House.png'
+import rental03Booking from '@assets/imgs/rentalBooking/Bounce House With Slide.png'
+
+
 
 const category = {
     1:"Normal",
@@ -23,7 +28,11 @@ export const rentalItems = [
         image:rental01,
         name:'Two Lane Racing Slide',
         price:'$500.00',
-        detailUrl:'',
+        twoDayRental:'$600.00',
+        weekendRental:'$700.00',
+        dimensions:"12' long, 27' wide, 18'tall",
+        bookingImg:rental01Booking,
+        detailUrl:'https://api.leadconnectorhq.com/widget/booking/ZMjAecjJsumgt2Cn1Z8Y',
         category:category[1],
         status:status[1]
     },
@@ -32,7 +41,11 @@ export const rentalItems = [
         image:rental02,
         name:'Kids Bounce House',
         price:'$500.00',
-        detailUrl:'',
+        twoDayRental:'$600.00',
+        weekendRental:'$700.00',
+        dimensions:"12' long, 27' wide, 18'tall",
+        bookingImg:rental02Booking,
+        detailUrl:'https://api.leadconnectorhq.com/widget/booking/cIxZmcCLhgPPmC6LWXSj',
         category:category[1],
         status:status[1]
     },
@@ -41,7 +54,11 @@ export const rentalItems = [
         image:rental03,
         name:'Bounce House With Slide',
         price:'$500.00',
-        detailUrl:'',
+        twoDayRental:'$600.00',
+        weekendRental:'$700.00',
+        dimensions:"12' long, 27' wide, 18'tall",
+        bookingImg:rental03Booking,
+        detailUrl:'https://api.leadconnectorhq.com/widget/booking/irOG8ZeghybQ7wgbOL2Z',
         category:category[1],
         status:status[1]
     },
@@ -77,7 +94,9 @@ export const rentalItems = [
         image:rental07,
         name:'Penis Ice Luge',
         price:'$500.00',
-        detailUrl:'',
+        twoDayRental:'$700.00',
+        bookingImg:rental07,
+        detailUrl:'https://api.leadconnectorhq.com/widget/booking/8qYkWYjYvz3uKg03qbhm',
         category:category[2],
         status:status[1]
     },
@@ -86,7 +105,9 @@ export const rentalItems = [
         image:rental08,
         name:'Boob Ice Luge',
         price:'$500.00',
-        detailUrl:'',
+        twoDayRental:'$700.00',
+        bookingImg:rental08,
+        detailUrl:'https://api.leadconnectorhq.com/widget/booking/2TOD7m6EYgB0mqzY8u3G',
         category:category[2],
         status:status[1]
     }

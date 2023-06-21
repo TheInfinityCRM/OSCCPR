@@ -3,15 +3,29 @@ import ReactPaginate from "react-paginate";
 import Card from "@components/card";
 import { rentalItems } from "@data/rentals";
 import ClientLayout from "@layouts/clientLayout/clientLayout";
+import Image, { StaticImageData } from "next/image";
 import Head from "next/head";
 import { AiOutlineClose } from "react-icons/ai";
-import { FiFilter } from "react-icons/fi";
+import { FiArrowLeft, FiFilter } from "react-icons/fi";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+import Modal from "@components/modal";
+import Heading from "@components/heading";
 
 const Rentals = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [adultItems, setAdultItems] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [activeItem, setActiveItem] = useState({
+    price: "",
+    bookingImg: "",
+    name: "",
+    detailUrl: "",
+    dimensions: "",
+    twoDayRental: "",
+    weekendRental: "",
+  });
+
   const itemsPerPage = 8;
 
   const filteredItems = rentalItems
@@ -40,6 +54,15 @@ const Rentals = () => {
     setCurrentPage(selected);
   };
 
+  const openModal = (data: any) => {
+    setActiveItem(data);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <>
       <Head>
@@ -49,7 +72,7 @@ const Rentals = () => {
           content="Welcome to Ocean State Costume Characters and Party Rentals, your hub for extraordinary celebrations."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <div className="py-6 bg-black">
         <div className="container text-white mt-24">
@@ -114,8 +137,10 @@ const Rentals = () => {
                 rentalImg={item.image}
                 rentalName={item.name}
                 rentalPrice={item.price}
-                rentalUrl={item.detailUrl}
                 rentalStatus={item.status}
+                openModal={() => {
+                  openModal(item);
+                }}
               />
             ))}
           </div>
@@ -134,6 +159,65 @@ const Rentals = () => {
             activeClassName={"active"}
           />
         </div>
+      </div>
+      <div>
+        <Modal isOpen={isModalOpen}>
+          <div onClick={closeModal}>
+            <p className="flex items-center font-montserrat text-sm cursor-pointer">
+              <FiArrowLeft size={20} className="text-[#FFCB05]" /> GO BACK
+            </p>
+          </div>
+          <div className="flex items-center justify-center my-3">
+            <h2 className="text-2xl text-[#FFCB05] border-b-2 border-[#FFCB05] font-bold font-montserrat">
+              {activeItem.name}
+            </h2>
+          </div>
+          <div className="flex justify-center items-center">
+            <h3 className="font-bold text-lg">{activeItem?.dimensions}</h3>
+          </div>
+          <div className="grid grid-cols-12 gap-6 lg:relative">
+            <div className="col-span-12 md:col-span-4">
+              <div className="border-2 border-white lg:absolute lg:left-60 lg:top-24 mt-4 lg:mt-0 rounded-lg px-4 py-4 w-full lg:w-80 text-center font-bold text-lg font-montserrat leading-loose">
+                <p>One Day Rental: {activeItem.price}</p>
+                {activeItem.twoDayRental ? (
+                  <p>Two Day Rental: {activeItem.twoDayRental}</p>
+                ) : (
+                  <></>
+                )}
+                {activeItem?.weekendRental ? (
+                  <p>Weekend Rental: {activeItem?.weekendRental}</p>
+                ) : (
+                  <></>
+                )}
+              </div>
+            </div>
+            {activeItem?.bookingImg ? (
+              <div className="col-span-12 md:col-span-8 flex justify-end">
+                <Image
+                  src={activeItem?.bookingImg}
+                  className=""
+                  alt={activeItem.name}
+                />
+              </div>
+            ) : (
+              <i className="text-white">No data available! :-/</i>
+            )}
+          </div>
+          {activeItem.detailUrl ? (
+            <div className="flex items-center justify-center my-6">
+              <Heading title={"Book Here!"} />
+            </div>
+          ) : (
+            <i className="text-white">No data available! :-/</i>
+          )}
+
+          <div className="flex items-center justify-center mb-6">
+            <iframe
+              src={activeItem.detailUrl}
+              className="w-full h-[570vh] md:h-[330vh] lg:h-[140vh] text-white border-none"
+            ></iframe>
+          </div>
+        </Modal>
       </div>
     </>
   );

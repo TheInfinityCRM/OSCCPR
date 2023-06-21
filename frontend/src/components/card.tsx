@@ -1,9 +1,7 @@
 import { ICardProps } from "@customTypes/components";
 import React from "react";
 import Image from "next/image";
-import rental from "@assets/imgs/rentals/Two Lane Racing Slide.png";
-import Button from "./button";
-import Link from "next/link";
+import placeholder from "@assets/imgs/logo.png";
 
 const Card: React.FC<ICardProps> = ({
   type,
@@ -13,9 +11,17 @@ const Card: React.FC<ICardProps> = ({
   rentalImg,
   rentalName,
   rentalPrice,
-  rentalUrl,
   rentalStatus,
+  openModal,
+  eventName,
+  eventImg
 }) => {
+  const handleClick = () => {
+    if (openModal) {
+      openModal();
+    }
+  };
+
   return (
     <>
       {type === "contact" ? (
@@ -31,7 +37,7 @@ const Card: React.FC<ICardProps> = ({
           <div className="grid grid-cols-1 place-items-center gap-y-4 py-6 rounded-lg bg-gradient-to-b from-black to-gray-800">
             <div className="relative">
               <Image
-                src={rentalImg || rental}
+                src={rentalImg || placeholder}
                 alt={rentalName || "Rental"}
                 className={`${
                   rentalStatus === "Sold Out" ? "opacity-25" : ""
@@ -53,9 +59,29 @@ const Card: React.FC<ICardProps> = ({
             <div className="text-white">
               <h3 className="text-xl font-semibold">{rentalPrice}</h3>
             </div>
-            <Link className="text-white" href={rentalUrl || ""}>
-              <Button title={"More Info"} type={"small"} />
-            </Link>
+            <button
+              onClick={handleClick}
+              className={`w-52 h-10 font-roboto border-2 rounded-full text-white hover:text-[#FFCB05] hover:border-[#FFCB05]`}
+            >
+              More Info
+            </button>
+          </div>
+        </div>
+      ) : type === "events" ? (
+        <div className="w-full lg:w-72 h-auto shadow-md shadow-[#FFCB05] rounded-lg">
+          <div className="grid grid-cols-1 place-items-center gap-y-4 bg-gradient-to-b from-black to-gray-800">
+            <div className="relative">
+              <Image
+                src={eventImg || placeholder}
+                alt={rentalName || "Rental"}
+                className={`w-full md:w-72 h-60 rounded-lg`}
+              />
+            </div>
+            <div className="text-white py-4">
+              <h3 className="text-lg font-montserrat font-bold">
+                {eventName}
+              </h3>
+            </div>
           </div>
         </div>
       ) : (
