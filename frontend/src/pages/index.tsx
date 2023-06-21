@@ -183,8 +183,8 @@ const Home: NextPageWithLayout = () => {
                         alt={value.alt}
                         className="bg-black object-cover h-80 overflow-hidden opacity-70  hover:transition hover:ease-in-out hover:duration-300"
                       />
-                      <div className="absolute">
-                        <p className="text-[#FFCB05] font-semibold font-roboto hover:transform hover:-translate-y-3 hover:transition hover:ease-in-out hover:delay-150 text-2xl inset-0 flex flex-col items-center justify-center">
+                      <div className="absolute inset-0 flex items-center justify-center hover:transform hover:-translate-y-3 hover:transition hover:ease-in-out hover:delay-150">
+                        <p className="text-[#FFCB05] font-semibold font-roboto  text-2xl">
                           {value.title} ➧
                         </p>
                       </div>
