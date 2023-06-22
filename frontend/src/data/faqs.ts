@@ -16,7 +16,7 @@ export const faqs = [
     },
     {
         id:4,
-        question:'How far in advance should I book a costume character?',
+        question:'How far in advance should I book a inflatable or costume character?',
         answer:'We recommend booking your desired costume character or inflatable as soon as you have a confirmed event date. This will help ensure availability and allow us to properly prepare for your event. However, we understand that sometimes events come up last-minute, and we will do our best to accommodate your requests, even on short notice.'
     },
     {
