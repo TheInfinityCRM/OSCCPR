@@ -54,7 +54,7 @@ export const rentalItems = [
     {
         id:3,
         image:rental03,
-        name:'Castle Bounce House/Water Slide',
+        name:'Castle Bounce House/Slide',
         price:'$200.00',
         twoDayRental:'$300.00',
         weekendRental:'$400.00',
