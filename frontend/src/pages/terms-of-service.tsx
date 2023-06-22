@@ -8,7 +8,7 @@ const Tos: NextPageWithLayout = () => {
     <>
       <Head>
         <title>Terms of Service</title>
-        <meta 
+        <meta
           name="description"
           content="Welcome to Ocean State Costume Characters and Party Rentals, your hub for extraordinary celebrations."
         />
@@ -29,7 +29,10 @@ const Tos: NextPageWithLayout = () => {
             <div className="h-full w-full">
               <div className="mb-4">
                 <h2>TERMS OF SERVICE</h2>
-                <p>Welcome to the Ocean State Costume Characters and Party Rentals (OSCCPR). The following Terms of Service (TOS) apply when you use our services.
+                <p>
+                  Welcome to the Ocean State Costume Characters and Party
+                  Rentals (OSCCPR). The following Terms of Service (TOS) apply
+                  when you use our services.
                 </p>
                 <p>
                   By visiting our site and/or purchasing something from us, you
@@ -61,18 +64,17 @@ const Tos: NextPageWithLayout = () => {
                   of or access to the website following the posting of any
                   changes constitutes acceptance of those changes.
                 </p>
-                <p>
-                  We do not hold
-                  any payment information in our systems.
-                </p>
+                <p>We do not hold any payment information in our systems.</p>
               </div>
 
               <div className="mb-4">
                 <h2>ACCEPTANCE OF TERMS</h2>
                 <p>
-                  By using our services, you agree to be bound by these terms and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing our services.
+                  By using our services, you agree to be bound by these terms
+                  and all applicable laws and regulations. If you do not agree
+                  with any of these terms, you are prohibited from using or
+                  accessing our services.
                 </p>
-
               </div>
 
               <div className="mb-4">
@@ -82,7 +84,10 @@ const Tos: NextPageWithLayout = () => {
                   reason at any time.
                 </p>
                 <p>
-                  OSCCPR provides costume character rentals and party rentals, including inflatables, bounce houses, water slides, dry slides, obstacle courses, and combo units. Services are provided in a safe and efficient manner.
+                  OSCCPR provides costume character rentals and party rentals,
+                  including inflatables, bounce houses, water slides, dry
+                  slides, obstacle courses, and combo units. Services are
+                  provided in a safe and efficient manner.
                 </p>
                 <p>
                   You agree not to reproduce, duplicate, copy, sell, resell or
@@ -99,11 +104,16 @@ const Tos: NextPageWithLayout = () => {
               </div>
 
               <div className="mb-4">
-                <h2>
-                  USE OF SERVICES
-                </h2>
+                <h2>USE OF SERVICES</h2>
                 <p>
-                  You must ensure that the services are used in a safe manner, and in accordance with any instructions provided. You acknowledge that you are responsible for determining your ability and skills required for our activities. You should consult a physician before undertaking any activity if you are pregnant, suffer from a medical condition, take medication, smoke, have a family history of coronary disease, or have recently suffered an illness, injury, or impairment
+                  You must ensure that the services are used in a safe manner,
+                  and in accordance with any instructions provided. You
+                  acknowledge that you are responsible for determining your
+                  ability and skills required for our activities. You should
+                  consult a physician before undertaking any activity if you are
+                  pregnant, suffer from a medical condition, take medication,
+                  smoke, have a family history of coronary disease, or have
+                  recently suffered an illness, injury, or impairment
                 </p>
                 <p>
                   This site may contain certain historical information.
@@ -117,7 +127,11 @@ const Tos: NextPageWithLayout = () => {
               <div className="mb-4">
                 <h2>LIABILITY</h2>
                 <p>
-                  You acknowledge that there is an inherent risk in participating in activities supplied by OSCCPR. By agreeing to these terms, you voluntarily assume all risks and liabilities arising from the use, condition and possession of any equipment or services from OSCCPR.
+                  You acknowledge that there is an inherent risk in
+                  participating in activities supplied by OSCCPR. By agreeing to
+                  these terms, you voluntarily assume all risks and liabilities
+                  arising from the use, condition and possession of any
+                  equipment or services from OSCCPR.
                 </p>
                 <p>
                   We reserve the right at any time to modify or discontinue the
@@ -134,32 +148,33 @@ const Tos: NextPageWithLayout = () => {
               <div className="mb-4">
                 <h2>MODIFICATION OF SERVICES</h2>
                 <p>
-                  We reserve the right to modify or discontinue, temporarily or permanently, any of our services with or without notice.
+                  We reserve the right to modify or discontinue, temporarily or
+                  permanently, any of our services with or without notice.
                 </p>
-
               </div>
 
               <div className="mb-4">
                 <h2>TERMINATION</h2>
                 <p>
-                  We may terminate or suspend your access to our services without prior notice or liability, for any reason whatsoever, including but not limited to a breach of the TOS.
+                  We may terminate or suspend your access to our services
+                  without prior notice or liability, for any reason whatsoever,
+                  including but not limited to a breach of the TOS.
                 </p>
-
               </div>
               <div className="mb-4">
                 <h2>GOVERNING LAW</h2>
                 <p>
-                  These terms shall be governed and construed in accordance with the laws of Rhode Island, United States, without regard to its conflict of law provisions.
+                  These terms shall be governed and construed in accordance with
+                  the laws of Rhode Island, United States, without regard to its
+                  conflict of law provisions.
                 </p>
-                
               </div>
-
-
 
               <div className="mb-4">
                 <h2>CONTACT INFORMATION</h2>
                 <p>
-                  Questions about the Terms of Service should be sent to us at{"info@osccpr.com"}
+                  Questions about the Terms of Service should be sent to us at
+                  {"info@osccpr.com"}
                   <a href="mailto: [email protected]">[email protected]</a>.
                 </p>
               </div>

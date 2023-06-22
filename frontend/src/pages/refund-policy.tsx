@@ -32,56 +32,58 @@ const Refundpolicy: NextPageWithLayout = () => {
                 <p>Last Updated: June 22, 2023</p>
 
                 <p>
-                  We understand that plans can change, and we strive to accommodate our customers as best we can. Our refund policy is as follows:
+                  We understand that plans can change, and we strive to
+                  accommodate our customers as best we can. Our refund policy is
+                  as follows:
                 </p>
-
-               
 
                 <h2>CANCELLATION</h2>
 
                 <p>
-                  If you cancel your reservation at least 7 days prior to your event, you will receive a full refund.
+                  If you cancel your reservation at least 7 days prior to your
+                  event, you will receive a full refund.
                 </p>
-
               </div>
               <div>
                 <h2>BAD WEATHER</h2>
 
                 <p>
-                  If your event is cancelled due to bad weather, we will do our best to reschedule. If rescheduling is not possible, a full refund will be provided.
+                  If your event is cancelled due to bad weather, we will do our
+                  best to reschedule. If rescheduling is not possible, a full
+                  refund will be provided.
                 </p>
-
-               
-
               </div>
               <div>
                 <h2>DAMAGE TO EQUIPMENT</h2>
 
-                <p>If any equipment is damaged due to misuse or negligence on the part of the renter, the renter will be held responsible for the cost of repair or replacement.</p>
-
-               
-
-
-                <h3>REFUND METHOD</h3>
-               <p>
-                  Refunds will be processed to the original method of payment within a certain number of days, depending on your card issuer&apos;s policies.
+                <p>
+                  If any equipment is damaged due to misuse or negligence on the
+                  part of the renter, the renter will be held responsible for
+                  the cost of repair or replacement.
                 </p>
 
+                <h3>REFUND METHOD</h3>
+                <p>
+                  Refunds will be processed to the original method of payment
+                  within a certain number of days, depending on your card
+                  issuer&apos;s policies.
+                </p>
               </div>
               <div>
                 <h2>NON-REFUNDABLE</h2>
 
                 <p>
-                  Please note that delivery fees and special service charges are non-refundable.
+                  Please note that delivery fees and special service charges are
+                  non-refundable.
                 </p>
 
                 <h2>REFUND REQUESTS</h2>
 
                 <p>
-                  To request a refund, please contact us at our customer service email or phone number. Provide your name, contact information, and the reason for your request.
+                  To request a refund, please contact us at our customer service
+                  email or phone number. Provide your name, contact information,
+                  and the reason for your request.
                 </p>
-
-              
               </div>
             </div>
           </div>

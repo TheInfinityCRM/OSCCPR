@@ -82,7 +82,7 @@ const Home: NextPageWithLayout = () => {
                       : item.id === 3
                       ? "object-left"
                       : item.id === 4
-                      ? "object-center"
+                      ? "object-left"
                       : item.id === 5
                       ? "object-center"
                       : "object-right"

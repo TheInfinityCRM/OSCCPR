@@ -2,6 +2,7 @@ import costume01 from "@assets/imgs/costumes/Darth Vader.png";
 import costume02 from "@assets/imgs/costumes/Jason Voorhees.png";
 import costume03 from "@assets/imgs/costumes/Batman.png";
 import costume04 from "@assets/imgs/costumes/Micheal Myers.png";
+import costume05 from "@assets/imgs/costumes/Grinch.png"
 
 export const costumes = [
   {
@@ -61,6 +62,21 @@ export const costumes = [
     id: 4,
     name: "Micheal Myers",
     image: costume04,
+    data: (
+      <p className="leading-loose font-montserrat my-4 text-justify">
+        Summon terror with our Michael Myers costume character. Experience true
+        horror as the iconic slasher comes to life at your event.<br></br><br></br> Our
+        professional Michael Myers character embodies the relentless killer,
+        complete with chilling mask and worn-out jumpsuit. Engage your guests
+        with jump scares and eerie encounters.<br></br> Customize the character to fit
+        your event. Contact us now to reserve your place in the world of horror.
+      </p>
+    ),
+  },
+  {
+    id: 5,
+    name: "The Grinch",
+    image: costume05,
     data: (
       <p className="leading-loose font-montserrat my-4 text-justify">
         Summon terror with our Michael Myers costume character. Experience true

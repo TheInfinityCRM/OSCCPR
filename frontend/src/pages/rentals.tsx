@@ -18,6 +18,7 @@ const Rentals = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeItem, setActiveItem] = useState({
     price: "",
+    withLed:"",
     bookingImg: "",
     name: "",
     detailUrl: "",
@@ -179,6 +180,9 @@ const Rentals = () => {
             <div className="col-span-12 md:col-span-4">
               <div className="border-2 border-white lg:absolute lg:left-60 lg:top-24 mt-4 lg:mt-0 rounded-lg px-4 py-4 w-full lg:w-80 text-center font-bold text-lg font-montserrat leading-loose">
                 <p>One Day Rental: {activeItem.price}</p>
+                {
+                  activeItem?.withLed ? <p>With LED: {activeItem.withLed}</p> : <></>
+                } 
                 {activeItem.twoDayRental ? (
                   <p>Two Day Rental: {activeItem.twoDayRental}</p>
                 ) : (

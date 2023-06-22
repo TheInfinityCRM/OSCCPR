@@ -12,7 +12,7 @@ export interface IButtonProps {
 export interface IAccordionProps {
     active:boolean,
     question:string,
-    answer:string
+    answer:any
 }
 
 export interface ICardProps {
