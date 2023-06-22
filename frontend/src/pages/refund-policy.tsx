@@ -64,7 +64,7 @@ const Refundpolicy: NextPageWithLayout = () => {
 
                 <h3>REFUND METHOD</h3>
                <p>
-                  Refunds will be processed to the original method of payment within a certain number of days, depending on your card issuer's policies.
+                  Refunds will be processed to the original method of payment within a certain number of days, depending on your card issuer&apos;s policies.
                 </p>
 
               </div>
