@@ -68,7 +68,7 @@ const Card: React.FC<ICardProps> = ({
           </div>
         </div>
       ) : type === "events" ? (
-        <div className="w-full lg:w-72 h-auto shadow-md shadow-[#FFCB05] rounded-lg">
+        <div className="w-full lg:w-72 h-auto shadow-lg shadow-[#FFCB05] rounded-xl">
           <div className="grid grid-cols-1 place-items-center gap-y-4 bg-gradient-to-b from-black to-gray-800">
             <div className="relative">
               <Image
