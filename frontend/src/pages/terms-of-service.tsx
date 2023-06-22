@@ -28,14 +28,8 @@ const Tos: NextPageWithLayout = () => {
           <div className="grid grid-cols-1 text-white font-semibold  leading-loose text-justify">
             <div className="h-full w-full">
               <div className="mb-4">
-                <h2>OVERVIEW</h2>
-                <p>
-                  This website is operated by Solez Chat LLC. Throughout the
-                  site, the terms “we”, “us” and “our” refer to Solez Chat LLC.
-                  Solez Chat LLC offers this website, including all information,
-                  tools and services available from this site to you, the user,
-                  conditioned upon your acceptance of all terms, conditions,
-                  policies and notices stated here.
+                <h2>TERMS OF SERVICE</h2>
+                <p>Welcome to the Ocean State Costume Characters and Party Rentals (OSCCPR). The following Terms of Service (TOS) apply when you use our services.
                 </p>
                 <p>
                   By visiting our site and/or purchasing something from us, you
