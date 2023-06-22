@@ -144,7 +144,7 @@ const Costumes = () => {
           </div>
           <div className="flex items-center justify-center my-3">
             <h2 className="text-2xl text-[#FFCB05] border-b-2 mb-6 border-[#FFCB05] font-bold font-montserrat">
-              Contact {title?.name} Here!
+              Contact {title?.name} Here! 
             </h2>
           </div>
           <div className="py-2 flex justify-center items-center">
