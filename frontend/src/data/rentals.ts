@@ -6,7 +6,7 @@ import rental05 from '@assets/imgs/rentals/Unicorn Bounce House.png'
 import rental06 from '@assets/imgs/rentals/Amazon Racing Slide.png'
 import rental07 from '@assets/imgs/rentals/Penis Ice Luge.png'
 import rental08 from '@assets/imgs/rentals/Boob Ice Luge.png'
-import rental09 from '@assets/imgs/rentals/speaker.jpeg'
+import rental09 from '@assets/imgs/rentals/speaker.png'
 import rental10 from '@assets/imgs/rentals/regular ice luge.png'
 
 import rental01Booking from '@assets/imgs/rentalBooking/Two Lane Racing Slide.png'
