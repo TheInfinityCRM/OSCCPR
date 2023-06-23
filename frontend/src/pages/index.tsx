@@ -268,7 +268,7 @@ const Home: NextPageWithLayout = () => {
                 type="contact"
                 icon={<SlLocationPin size={40} />}
                 item={"Location"}
-                contact={"Rhone Island"}
+                contact={"Rhode Island"}
               />
               <Card
                 type="contact"
