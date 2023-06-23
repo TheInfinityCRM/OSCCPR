@@ -1,7 +1,7 @@
 import tropical1 from '@assets/imgs/iceluge.jpg'
-import tropical2 from '@assets/imgs/tropical_slide2.jpeg'
-import tropical3 from '@assets/imgs/tropical_slide3.jpeg'
-import tropical4 from '@assets/imgs/tropical_slide4.jpeg'
+import tropical2 from '@assets/imgs/tropical_slide2.png'
+import tropical3 from '@assets/imgs/tropical_slide3.png'
+import tropical4 from '@assets/imgs/tropical_slide4.png'
 
 export const homeSlides = [
     {id:1, Image:tropical1, alt:'Slide 1', title:'Ice Luge', oneDayRent:'$50.00', twoDayRent:'$65.00'},
