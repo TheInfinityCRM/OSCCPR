@@ -173,7 +173,7 @@ const Home: NextPageWithLayout = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> 
           <div id="events">
             <div className="flex justify-center items-center py-6">
               <Heading title="Events We Cater To..." />
