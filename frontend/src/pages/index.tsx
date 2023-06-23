@@ -119,9 +119,7 @@ const Home: NextPageWithLayout = () => {
               celebrations into unforgettable memories. Choose us, and together,
               lets create magic!
             </p>
-            <div className="flex justify-center items-center py-4">
-              <Button type="small" title="Our story ➧" />
-            </div>
+
           </div>
           <div id="water slides and bounce houses">
             <div className="flex justify-center text-center items-center py-6">
