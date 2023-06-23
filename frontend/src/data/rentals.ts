@@ -92,7 +92,6 @@ export const rentalItems = [
         image:rental09,
         name:'15" Bluetooth party speaker',
         price:'$50.00',
-        twoDayRental:'$700.00',
         bookingImg:rental09,
         detailUrl:'',
         category:category[1],
