@@ -241,7 +241,7 @@ const Home: NextPageWithLayout = () => {
             <div className="py-2 flex justify-center items-center">
               <iframe
                 src="https://api.leadconnectorhq.com/widget/form/ai1gyJlD8zQcumUrRque"
-                className="w-full h-[120vh] md:h-[60vh]  lg:h-screen text-white"
+                className="w-full h-[80vh] md:h-[50vh]  lg:h-[68vh] text-white"
                 id="inline-ai1gyJlD8zQcumUrRque"
                 data-layout="{'id':'INLINE'}"
                 data-trigger-type="alwaysShow"
@@ -312,7 +312,7 @@ const Home: NextPageWithLayout = () => {
           <div className="py-2 flex justify-center items-center">
               <iframe
                 src="https://api.leadconnectorhq.com/widget/form/ai1gyJlD8zQcumUrRque"
-                className="w-full h-[120vh] md:h-[60vh]  lg:h-screen"
+                className="w-full h-[80vh] md:h-[50vh]  lg:h-[68vh]"
                 id="inline-ai1gyJlD8zQcumUrRque"
                 data-layout="{'id':'INLINE'}"
                 data-trigger-type="alwaysShow"
