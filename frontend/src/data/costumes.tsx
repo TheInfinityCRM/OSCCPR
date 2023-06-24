@@ -57,7 +57,7 @@ export const costumes = [
         <br></br>Contact us now to reserve your place in Gotham City.
       </p>
     ),
-  },
+  }, 
   {
     id: 4,
     name: "Michael Myers",
