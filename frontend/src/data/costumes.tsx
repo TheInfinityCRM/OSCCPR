@@ -58,7 +58,7 @@ export const costumes = [
   },
   {
     id: 4,
-    name: "Micheal Myers",
+    name: "Michael Myers",
     image: costume04,
     data: (
       <p className="leading-loose font-montserrat my-4 text-justify">
