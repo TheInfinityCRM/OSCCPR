@@ -2,7 +2,8 @@ import { AppPropsWithLayout } from '@customTypes/layouts'
 import '@assets/styles/globals.css'
 import React from 'react'
 import { useRouter } from 'next/router'
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 

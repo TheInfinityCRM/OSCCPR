@@ -20,7 +20,7 @@ const Costumes = () => {
   const handleAccordionClick = (index: boolean) => {
     setActiveAccordion((prev) => !prev);
   };
-  const itemsPerPage = 4;
+  const itemsPerPage = 5;
 
   const costumeItems = costumes;
 
@@ -55,7 +55,7 @@ const Costumes = () => {
       <div className="py-6 bg-black">
         <div className="container text-white">
           {currentItems.map((value) => (
-            <div key={value.id} className="my-24 lg:my-0">
+            <section id={value.href} key={value.id} className="my-24 lg:my-0">
               {value.id % 2 == 0 ? (
                 <div className="grid grid-cols-12 gap-4 place-items-center lg:h-screen 2xl:h-auto">
                   <div className="hidden md:block col-span-12 md:col-span-5 lg:col-span-4">
@@ -78,7 +78,7 @@ const Costumes = () => {
                     </div>
                     <div className="hidden md:block">{value.data}</div>
                     <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center gap-4 pt-6">
-                      <div onClick={() => openModal(value)} className='w-full'>
+                      <div onClick={() => openModal(value)} className="w-full">
                         <Button title={"Book Now"} type={"medium"} />
                       </div>
                       <Button title={"View Images"} type={"medium"} />
@@ -104,7 +104,7 @@ const Costumes = () => {
                     </div>
                     <div className="hidden md:block">{value.data}</div>
                     <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center gap-4 pt-6">
-                      <div onClick={() => openModal(value)} className='w-full'>
+                      <div onClick={() => openModal(value)} className="w-full">
                         <Button title={"Book Now"} type={"medium"} />
                       </div>
                       <Button title={"View Images"} type={"medium"} />
@@ -115,7 +115,7 @@ const Costumes = () => {
                   </div>
                 </div>
               )}
-            </div>
+            </section>
           ))}
           <div>
             <ReactPaginate
@@ -142,30 +142,36 @@ const Costumes = () => {
               <FiArrowLeft size={20} className="text-[#FFCB05]" /> GO BACK
             </p>
           </div>
-          <div className="flex items-center justify-center my-3">
-            <h2 className="text-2xl text-[#FFCB05] border-b-2 mb-6 border-[#FFCB05] font-bold font-montserrat">
-              Contact {title?.name} Here! 
-            </h2>
-          </div>
-          <div className="py-2 flex justify-center items-center">
-            <iframe
-              src="https://api.leadconnectorhq.com/widget/form/ai1gyJlD8zQcumUrRque"
-              className="w-full h-[120vh] md:h-[60vh]  lg:h-screen"
-              id="inline-ai1gyJlD8zQcumUrRque"
-              data-layout="{'id':'INLINE'}"
-              data-trigger-type="alwaysShow"
-              data-trigger-value=""
-              data-activation-type="alwaysActivated"
-              data-activation-value=""
-              data-deactivation-type="neverDeactivate"
-              data-deactivation-value=""
-              data-form-name="Contact Form"
-              data-height="567"
-              data-layout-iframe-id="inline-ai1gyJlD8zQcumUrRque"
-              data-form-id="ai1gyJlD8zQcumUrRque"
-              title="Contact Form"
-            ></iframe>
-          </div>
+          {title?.name ? (
+            <>
+              <div className="flex items-center justify-center my-3">
+                <h2 className="text-2xl text-[#FFCB05] border-b-2 mb-6 border-[#FFCB05] font-bold font-montserrat">
+                  Contact {title?.name} Here!
+                </h2>
+              </div>
+              <div className="py-2 flex justify-center items-center">
+                <iframe
+                  src="https://api.leadconnectorhq.com/widget/form/ai1gyJlD8zQcumUrRque"
+                  className="w-full h-[120vh] md:h-[60vh]  lg:h-screen"
+                  id="inline-ai1gyJlD8zQcumUrRque"
+                  data-layout="{'id':'INLINE'}"
+                  data-trigger-type="alwaysShow"
+                  data-trigger-value=""
+                  data-activation-type="alwaysActivated"
+                  data-activation-value=""
+                  data-deactivation-type="neverDeactivate"
+                  data-deactivation-value=""
+                  data-form-name="Contact Form"
+                  data-height="567"
+                  data-layout-iframe-id="inline-ai1gyJlD8zQcumUrRque"
+                  data-form-id="ai1gyJlD8zQcumUrRque"
+                  title="Contact Form"
+                ></iframe>
+              </div>
+            </>
+          ) : (
+            <></>
+          )}
         </Modal>
       </div>
     </>

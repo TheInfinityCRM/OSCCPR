@@ -2,6 +2,7 @@ import { ICardProps } from "@customTypes/components";
 import React from "react";
 import Image from "next/image";
 import placeholder from "@assets/imgs/logo.png";
+import { AiFillStar } from "react-icons/ai";
 
 const Card: React.FC<ICardProps> = ({
   type,
@@ -14,7 +15,9 @@ const Card: React.FC<ICardProps> = ({
   rentalStatus,
   openModal,
   eventName,
-  eventImg
+  eventImg,
+  review,
+  rating
 }) => {
   const handleClick = () => {
     if (openModal) {
@@ -78,10 +81,23 @@ const Card: React.FC<ICardProps> = ({
               />
             </div>
             <div className="text-white py-4">
-              <h3 className="text-lg font-montserrat font-bold">
-                {eventName}
-              </h3>
+              <h3 className="text-lg font-montserrat font-bold">{eventName}</h3>
             </div>
+          </div>
+        </div>
+      ) : type === "review" ? (
+        <div className="w-full lg:w-96 text-white">
+          <div className="grid grid-cols-1 rounded-2xl h-60 px-4 text-sm py-10 font-montserrat  gap-y-4 bg-gradient-to-b from-[#151515] to-gray-800">
+              <div className="text-justify">
+              {review}
+              </div>
+              <div className="flex justify-end items-end">
+                {
+                  Array.from({ length: rating }, (_, index) => (
+                    <AiFillStar key={index} className='text-[#FFCB15]' />
+                  ))
+                }
+              </div>
           </div>
         </div>
       ) : (

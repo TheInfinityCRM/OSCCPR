@@ -15,6 +15,7 @@ export const carouselItems = [
           party!
         </>
       ),
+      href:'/costumes#grinch'
     },
     {
       id: 2,
@@ -25,6 +26,7 @@ export const carouselItems = [
           party!
         </>
       ),
+      href:'/costumes#batman'
     },
     {
       id: 3,
@@ -35,6 +37,8 @@ export const carouselItems = [
           next party!
         </>
       ),
+      href:'/costumes#michaelmyres'
+
     },
     {
       id: 4,
@@ -45,6 +49,7 @@ export const carouselItems = [
           party!
         </>
       ),
+      href:'/rentals'
     },
     {
       id: 5,
@@ -54,6 +59,7 @@ export const carouselItems = [
           Hire <span className="text-[#FFCB05]">Jason</span> for your next party!
         </>
       ),
+      href:'/costumes#jasonvoorhees'
     },
     {
       id: 6,
@@ -64,5 +70,6 @@ export const carouselItems = [
           party!{" "}
         </>
       ),
+      href:'/costumes#darthvader'
     },
   ];

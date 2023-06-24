@@ -26,5 +26,7 @@ export interface ICardProps {
     rentalStatus?:string,
     openModal?: any,
     eventName?:string,
-    eventImg?:string | StaticImageData
+    eventImg?:string | StaticImageData,
+    review?:string,
+    rating?:any
 }

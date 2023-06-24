@@ -20,8 +20,48 @@ import { SlLocationPin } from "react-icons/sl";
 import { MdEmail } from "react-icons/md";
 import { carouselItems } from "@data/carousel";
 import Modal from "@components/modal";
+import { reviews } from "@data/reviews";
+import Slider from "react-slick";
 
 const Home: NextPageWithLayout = () => {
+  var settings = {
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: false,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: false,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   const [slidesData, setShowSlidesData] = React.useState<number>(0);
   const [activeAccordion, setActiveAccordion] = React.useState<number | null>(
     null
@@ -95,7 +135,9 @@ const Home: NextPageWithLayout = () => {
                   >
                     {item.tagline}
                   </div>
-                  <Button type="small" title="View more" />
+                  <Link href={item.href}>
+                    <Button type="small" title="View more" />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -104,7 +146,7 @@ const Home: NextPageWithLayout = () => {
       </div>
       <div className="bg-black">
         <div className="container">
-          <div className="py-10" id="about">
+          <div className="py-6 md:py-10" id="about">
             <div className="flex justify-center items-center py-6">
               <Heading title="About Us" />
             </div>
@@ -119,9 +161,8 @@ const Home: NextPageWithLayout = () => {
               celebrations into unforgettable memories. Choose us, and together,
               lets create magic!
             </p>
-
           </div>
-          <div id="water slides and bounce houses">
+          <div id="water slides and bounce houses" className="py-6 md:py-10">
             <div className="flex justify-center text-center items-center py-6">
               <Heading title="Inflatables &amp; More" />
             </div>
@@ -173,8 +214,8 @@ const Home: NextPageWithLayout = () => {
                 </div>
               ))}
             </div>
-          </div> 
-          <div id="events">
+          </div>
+          <div id="events" className="py-6 md:py-10">
             <div className="flex justify-center items-center py-6">
               <Heading title="Events We Cater To..." />
             </div>
@@ -202,7 +243,7 @@ const Home: NextPageWithLayout = () => {
               ))}
             </div>
           </div>
-          <section id="faq">
+          <section id="faq" className="py-6 md:py-10">
             <div className="flex justify-center items-center py-6">
               <Heading title="Have a question?" />
             </div>
@@ -218,18 +259,30 @@ const Home: NextPageWithLayout = () => {
               ))}
             </div>
           </section>
-          <div id="reviews">
-            <div className="flex justify-center items-center">
-              <h3 className="text-white text-2xl font-montserrat">Success</h3>
+          <div id="reviews" className="py-6 md:py-10">
+            <div className="flex justify-center items-centers">
+              <h3 className="text-white text-2xl font-montserrat italic font-semibold">
+                Success
+              </h3>
             </div>
             <div className="flex justify-center text-center items-center py-3">
               <Heading title="Don't just take our word for it..." />
             </div>
-            <div className="flex h-52 justify-center items-center text-white">
-              Google Reviews
+            <div>
+              <Slider {...settings}>
+                {reviews.map((value) => (
+                  <div key={value.id} className="px-2">
+                    <Card
+                      type={"review"}
+                      review={value.review}
+                      rating={value.rating}
+                    />
+                  </div>
+                ))}
+              </Slider>
             </div>
           </div>
-          <section id="contact">
+          <section id="contact" className="py-6 md:py-10">
             <div className="flex justify-center items-center py-6">
               <Heading title="Get in touch..." />
             </div>
@@ -310,24 +363,24 @@ const Home: NextPageWithLayout = () => {
               ))}
           </div>
           <div className="py-2 flex justify-center items-center">
-              <iframe
-                src="https://api.leadconnectorhq.com/widget/form/ai1gyJlD8zQcumUrRque"
-                className="w-full h-[80vh] md:h-[50vh]  lg:h-[68vh]"
-                id="inline-ai1gyJlD8zQcumUrRque"
-                data-layout="{'id':'INLINE'}"
-                data-trigger-type="alwaysShow"
-                data-trigger-value=""
-                data-activation-type="alwaysActivated"
-                data-activation-value=""
-                data-deactivation-type="neverDeactivate"
-                data-deactivation-value=""
-                data-form-name="Contact Form"
-                data-height="567" 
-                data-layout-iframe-id="inline-ai1gyJlD8zQcumUrRque"
-                data-form-id="ai1gyJlD8zQcumUrRque"
-                title="Contact Form"
-              ></iframe>
-            </div>
+            <iframe
+              src="https://api.leadconnectorhq.com/widget/form/ai1gyJlD8zQcumUrRque"
+              className="w-full h-[80vh] md:h-[50vh]  lg:h-[68vh]"
+              id="inline-ai1gyJlD8zQcumUrRque"
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="Contact Form"
+              data-height="567"
+              data-layout-iframe-id="inline-ai1gyJlD8zQcumUrRque"
+              data-form-id="ai1gyJlD8zQcumUrRque"
+              title="Contact Form"
+            ></iframe>
+          </div>
         </Modal>
       </div>
     </>
