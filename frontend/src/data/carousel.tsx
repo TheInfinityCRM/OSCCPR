@@ -33,7 +33,7 @@ export const carouselItems = [
       image: myres,
       tagline: (
         <>
-          Hire <span className="text-[#FFCB05]">Micheal Myres</span> for your
+          Hire <span className="text-[#FFCB05]">Michael Myres</span> for your
           next party!
         </>
       ),
