@@ -4,6 +4,15 @@ import costume03 from "@assets/imgs/costumes/Batman.png";
 import costume04 from "@assets/imgs/costumes/Micheal Myers.png";
 import costume05 from "@assets/imgs/costumes/Grinch.png";
 
+import darthvader01 from "@assets/imgs/costumeGallery/Darth Vader01.png"
+import darthvader02 from "@assets/imgs/costumeGallery/Darth Vader02.png"
+import darthvader03 from "@assets/imgs/costumeGallery/Darth Vader03.png"
+
+import jasonvoorhees01 from "@assets/imgs/costumeGallery/Jason Voorhees01.png"
+import jasonvoorhees02 from "@assets/imgs/costumeGallery/Jason Voorhees02.png"
+import jasonvoorhees03 from "@assets/imgs/costumeGallery/Jason Voorhees03.png"
+
+
 export const costumes = [
   {
     id: 1,
@@ -22,6 +31,20 @@ export const costumes = [
         place in Star Wars history.
       </p>
     ),
+    imgs: [
+      {
+        id:1,
+        img:darthvader01
+      },
+      {
+        id:2,
+        img:darthvader02
+      },
+      {
+        id:3,
+        img:darthvader03
+      }
+    ]
   },
   {
     id: 2,
@@ -41,6 +64,20 @@ export const costumes = [
         Contact us now to reserve your place in the realm of horror.
       </p>
     ),
+    imgs: [
+      {
+        id:1,
+        img:jasonvoorhees01
+      },
+      {
+        id:2,
+        img:jasonvoorhees02
+      },
+      {
+        id:3,
+        img:jasonvoorhees03
+      }
+    ]
   },
   {
     id: 3,
@@ -57,6 +94,9 @@ export const costumes = [
         <br></br>Contact us now to reserve your place in Gotham City.
       </p>
     ),
+    imgs:[
+
+    ]
   }, 
   {
     id: 4,
@@ -73,6 +113,9 @@ export const costumes = [
         <br></br>Contact us now to reserve your place in the world of horror.
       </p>
     ),
+    imgs:[
+      
+    ]
   },
   {
     id: 5,
@@ -95,5 +138,8 @@ export const costumes = [
         event truly memorable.
       </p>
     ),
+    imgs:[
+      
+    ]
   },
 ];

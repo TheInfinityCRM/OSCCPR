@@ -22,6 +22,8 @@ import { carouselItems } from "@data/carousel";
 import Modal from "@components/modal";
 import { reviews } from "@data/reviews";
 import Slider from "react-slick";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Home: NextPageWithLayout = () => {
   var settings = {
@@ -68,6 +70,12 @@ const Home: NextPageWithLayout = () => {
   );
   const [isModalOpen, setIsModalOpen] = React.useState(false);
   const [title, setTitle] = React.useState({ id: 0, title: "" });
+
+  React.useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
+  
 
   const handleAccordionClick = (index: number) => {
     if (index === activeAccordion) {
@@ -128,7 +136,7 @@ const Home: NextPageWithLayout = () => {
                       : "object-right"
                   } md:"object-center"`}
                 />
-                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                <div className="absolute inset-0 flex flex-col items-center justify-center" data-aos="fade">
                   <div
                     className="text-white font-bold font-montserrat text-3xl md:text-5xl w-auto text-center mb-6"
                     style={{ lineHeight: "4rem" }}
@@ -147,10 +155,10 @@ const Home: NextPageWithLayout = () => {
       <div className="bg-black">
         <div className="container">
           <div className="py-6 md:py-10" id="about">
-            <div className="flex justify-center items-center py-6">
+            <div className="flex justify-center items-center py-6" data-aos="fade">
               <Heading title="About Us" />
             </div>
-            <p className="text-white font-montserrat leading-7 mx-6 py-6 text-justify">
+            <p className="text-white font-montserrat leading-7 mx-6 py-6 text-justify" data-aos="fade">
               Welcome to Ocean State Costume Characters and Party Rentals, your
               hub for extraordinary celebrations. We specialize in sprinkling
               magic on your events with our range of high quality costume
@@ -162,11 +170,11 @@ const Home: NextPageWithLayout = () => {
               lets create magic!
             </p>
           </div>
-          <div id="water slides and bounce houses" className="py-6 md:py-10">
-            <div className="flex justify-center text-center items-center py-6">
+          <div id="water slides and bounce houses" className="py-6 md:py-10" >
+            <div className="flex justify-center text-center items-center py-6" data-aos="fade">
               <Heading title="Inflatables &amp; More" />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 py-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 py-6" data-aos="fade">
               {homeSlides.map((value) => (
                 <div
                   className="relative"
@@ -216,10 +224,10 @@ const Home: NextPageWithLayout = () => {
             </div>
           </div>
           <div id="events" className="py-6 md:py-10">
-            <div className="flex justify-center items-center py-6">
+            <div className="flex justify-center items-center py-6" data-aos="fade">
               <Heading title="Events We Cater To..." />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 py-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 py-6" data-aos="fade">
               {events.map((value) => (
                 <div
                   key={value.id}
@@ -244,10 +252,10 @@ const Home: NextPageWithLayout = () => {
             </div>
           </div>
           <section id="faq" className="py-6 md:py-10">
-            <div className="flex justify-center items-center py-6">
+            <div className="flex justify-center items-center py-6" data-aos="fade">
               <Heading title="Have a question?" />
             </div>
-            <div className="grid gap-y-2 pb-20">
+            <div className="grid gap-y-2 pb-20" data-aos="fade">
               {faqs.map((value, index) => (
                 <div key={value.id} onClick={() => handleAccordionClick(index)}>
                   <Accordion
@@ -260,15 +268,15 @@ const Home: NextPageWithLayout = () => {
             </div>
           </section>
           <div id="reviews" className="py-6 md:py-10">
-            <div className="flex justify-center items-centers">
+            <div className="flex justify-center items-centers" data-aos="fade">
               <h3 className="text-white text-2xl font-montserrat italic font-semibold">
                 Success
               </h3>
             </div>
-            <div className="flex justify-center text-center items-center py-3">
+            <div className="flex justify-center text-center items-center py-3" data-aos="fade">
               <Heading title="Don't just take our word for it..." />
             </div>
-            <div>
+            <div data-aos="fade">
               <Slider {...settings}>
                 {reviews.map((value) => (
                   <div key={value.id} className="px-2">
@@ -283,15 +291,15 @@ const Home: NextPageWithLayout = () => {
             </div>
           </div>
           <section id="contact" className="py-6 md:py-10">
-            <div className="flex justify-center items-center py-6">
+            <div className="flex justify-center items-center py-6" data-aos="fade">
               <Heading title="Get in touch..." />
             </div>
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center" data-aos="fade">
               <h3 className="text-white text-lg text-center md:text-2xl font-montserrat font-semibold">
                 Fill out this form to inquire about out services!
               </h3>
             </div>
-            <div className="py-2 flex justify-center items-center">
+            <div className="py-2 flex justify-center items-center" data-aos="fade">
               <iframe
                 src="https://api.leadconnectorhq.com/widget/form/ai1gyJlD8zQcumUrRque"
                 className="w-full h-[80vh] md:h-[50vh]  lg:h-[68vh] text-white"
@@ -310,7 +318,7 @@ const Home: NextPageWithLayout = () => {
                 title="Contact Form"
               ></iframe>
             </div>
-            <div className="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-6">
+            <div className="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-6" data-aos="fade">
               <Card
                 type="contact"
                 icon={<FiPhone size={40} />}
@@ -334,7 +342,8 @@ const Home: NextPageWithLayout = () => {
         </div>
       </div>
       <div>
-        <Modal isOpen={isModalOpen}>
+        <Modal isOpen={isModalOpen} scroll={true}>
+          <div className="container" data-aos="fade">
           <div onClick={closeModal}>
             <p className="flex items-center font-montserrat text-sm cursor-pointer">
               <FiArrowLeft size={20} className="text-[#FFCB05]" /> GO BACK
@@ -380,6 +389,7 @@ const Home: NextPageWithLayout = () => {
               data-form-id="ai1gyJlD8zQcumUrRque"
               title="Contact Form"
             ></iframe>
+          </div>
           </div>
         </Modal>
       </div>

@@ -87,7 +87,7 @@ const Card: React.FC<ICardProps> = ({
         </div>
       ) : type === "review" ? (
         <div className="w-full lg:w-96 text-white">
-          <div className="grid grid-cols-1 rounded-2xl h-60 px-4 text-sm py-10 font-montserrat  gap-y-4 bg-gradient-to-b from-[#151515] to-gray-800">
+          <div className="grid grid-cols-1  rounded-2xl h-72 md:h-60 px-4 text-sm py-10 font-montserrat  gap-y-4 bg-gradient-to-b from-[#151515] to-gray-800">
               <div className="text-justify">
               {review}
               </div>

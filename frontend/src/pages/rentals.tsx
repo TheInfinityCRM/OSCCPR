@@ -10,6 +10,8 @@ import { FiArrowLeft, FiFilter } from "react-icons/fi";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import Modal from "@components/modal";
 import Heading from "@components/heading";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Rentals = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -28,6 +30,10 @@ const Rentals = () => {
   });
 
   const itemsPerPage = 8;
+
+  React.useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
 
   const filteredItems = rentalItems
     .filter((val) => {
@@ -75,7 +81,7 @@ const Rentals = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <div className="py-6 bg-black">
+      <div className="py-6 bg-black 2xl:h-screen pb-28">
         <div className="container text-white mt-24">
           <div className="grid grid-cols-12">
             <div className="col-span-12 xl:col-span-2">
@@ -130,7 +136,7 @@ const Rentals = () => {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12 pb-12" data-aos='fade'>
             {currentItems.map((item) => (
               <Card
                 key={item.id}
@@ -162,7 +168,8 @@ const Rentals = () => {
         </div>
       </div>
       <div>
-        <Modal isOpen={isModalOpen}>
+        <Modal isOpen={isModalOpen} scroll={true}>
+          <div className="container" data-aos='fade'>
           <div onClick={closeModal}>
             <p className="flex items-center font-montserrat text-sm cursor-pointer">
               <FiArrowLeft size={20} className="text-[#FFCB05]" /> GO BACK
@@ -178,7 +185,7 @@ const Rentals = () => {
           </div>
           <div className="grid grid-cols-12 gap-6 lg:relative">
             <div className="col-span-12 md:col-span-4">
-              <div className="border-2 border-white lg:absolute lg:left-60 lg:top-24 mt-4 lg:mt-0 rounded-lg px-4 py-4 w-full lg:w-80 text-center font-bold text-lg font-montserrat leading-loose">
+              <div className="border-2 border-white lg:absolute  xl:left-44 lg:top-24 mt-4 lg:mt-0 rounded-lg px-4 py-4 w-full lg:w-80 text-center font-bold text-lg font-montserrat leading-loose">
                 <p>One Day Rental: {activeItem.price}</p>
                 {
                   activeItem?.withLed ? <p>With LED: {activeItem.withLed}</p> : <></>
@@ -220,6 +227,7 @@ const Rentals = () => {
               src={activeItem.detailUrl}
               className="w-full h-[570vh] md:h-[330vh] lg:h-[140vh] text-white border-none"
             ></iframe>
+          </div>
           </div>
         </Modal>
       </div>
