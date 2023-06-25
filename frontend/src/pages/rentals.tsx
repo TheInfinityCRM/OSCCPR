@@ -20,7 +20,7 @@ const Rentals = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeItem, setActiveItem] = useState({
     price: "",
-    withLed:"",
+    withLed: "",
     bookingImg: "",
     name: "",
     detailUrl: "",
@@ -136,19 +136,20 @@ const Rentals = () => {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12 pb-12" data-aos='fade'>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12 pb-12">
             {currentItems.map((item) => (
-              <Card
-                key={item.id}
-                type="rental"
-                rentalImg={item.image}
-                rentalName={item.name}
-                rentalPrice={item.price}
-                rentalStatus={item.status}
-                openModal={() => {
-                  openModal(item);
-                }}
-              />
+              <div data-aos="fade" key={item.id}>
+                <Card
+                  type="rental"
+                  rentalImg={item.image}
+                  rentalName={item.name}
+                  rentalPrice={item.price}
+                  rentalStatus={item.status}
+                  openModal={() => {
+                    openModal(item);
+                  }}
+                />
+              </div>
             ))}
           </div>
           <ReactPaginate
@@ -169,65 +170,67 @@ const Rentals = () => {
       </div>
       <div>
         <Modal isOpen={isModalOpen} scroll={true}>
-          <div className="container" data-aos='fade'>
-          <div onClick={closeModal}>
-            <p className="flex items-center font-montserrat text-sm cursor-pointer">
-              <FiArrowLeft size={20} className="text-[#FFCB05]" /> GO BACK
-            </p>
-          </div>
-          <div className="flex items-center justify-center my-3">
-            <h2 className="text-2xl text-[#FFCB05] border-b-2 border-[#FFCB05] font-bold font-montserrat">
-              {activeItem.name}
-            </h2>
-          </div>
-          <div className="flex justify-center items-center">
-            <h3 className="font-bold text-lg">{activeItem?.dimensions}</h3>
-          </div>
-          <div className="grid grid-cols-12 gap-6 lg:relative">
-            <div className="col-span-12 md:col-span-4">
-              <div className="border-2 border-white lg:absolute  xl:left-44 lg:top-24 mt-4 lg:mt-0 rounded-lg px-4 py-4 w-full lg:w-80 text-center font-bold text-lg font-montserrat leading-loose">
-                <p>One Day Rental: {activeItem.price}</p>
-                {
-                  activeItem?.withLed ? <p>With LED: {activeItem.withLed}</p> : <></>
-                } 
-                {activeItem.twoDayRental ? (
-                  <p>Two Day Rental: {activeItem.twoDayRental}</p>
-                ) : (
-                  <></>
-                )}
-                {activeItem?.weekendRental ? (
-                  <p>Weekend Rental: {activeItem?.weekendRental}</p>
-                ) : (
-                  <></>
-                )}
-              </div>
+          <div className="container" data-aos="fade">
+            <div onClick={closeModal}>
+              <p className="flex items-center font-montserrat text-sm cursor-pointer">
+                <FiArrowLeft size={20} className="text-[#FFCB05]" /> GO BACK
+              </p>
             </div>
-            {activeItem?.bookingImg ? (
-              <div className="col-span-12 md:col-span-8 flex justify-end">
-                <Image
-                  src={activeItem?.bookingImg}
-                  className=""
-                  alt={activeItem.name}
-                />
+            <div className="flex items-center justify-center my-3">
+              <h2 className="text-2xl text-[#FFCB05] border-b-2 border-[#FFCB05] font-bold font-montserrat">
+                {activeItem.name}
+              </h2>
+            </div>
+            <div className="flex justify-center items-center">
+              <h3 className="font-bold text-lg">{activeItem?.dimensions}</h3>
+            </div>
+            <div className="grid grid-cols-12 gap-6 lg:relative">
+              <div className="col-span-12 md:col-span-4">
+                <div className="border-2 border-white lg:absolute  xl:left-44 lg:top-24 mt-4 lg:mt-0 rounded-lg px-4 py-4 w-full lg:w-80 text-center font-bold text-lg font-montserrat leading-loose">
+                  <p>One Day Rental: {activeItem.price}</p>
+                  {activeItem?.withLed ? (
+                    <p>With LED: {activeItem.withLed}</p>
+                  ) : (
+                    <></>
+                  )}
+                  {activeItem.twoDayRental ? (
+                    <p>Two Day Rental: {activeItem.twoDayRental}</p>
+                  ) : (
+                    <></>
+                  )}
+                  {activeItem?.weekendRental ? (
+                    <p>Weekend Rental: {activeItem?.weekendRental}</p>
+                  ) : (
+                    <></>
+                  )}
+                </div>
+              </div>
+              {activeItem?.bookingImg ? (
+                <div className="col-span-12 md:col-span-8 flex justify-end">
+                  <Image
+                    src={activeItem?.bookingImg}
+                    className=""
+                    alt={activeItem.name}
+                  />
+                </div>
+              ) : (
+                <i className="text-white">No data available! :-/</i>
+              )}
+            </div>
+            {activeItem.detailUrl ? (
+              <div className="flex items-center justify-center my-6">
+                <Heading title={"Book Here!"} />
               </div>
             ) : (
               <i className="text-white">No data available! :-/</i>
             )}
-          </div>
-          {activeItem.detailUrl ? (
-            <div className="flex items-center justify-center my-6">
-              <Heading title={"Book Here!"} />
-            </div>
-          ) : (
-            <i className="text-white">No data available! :-/</i>
-          )}
 
-          <div className="flex items-center justify-center mb-6">
-            <iframe
-              src={activeItem.detailUrl}
-              className="w-full h-[570vh] md:h-[330vh] lg:h-[140vh] text-white border-none"
-            ></iframe>
-          </div>
+            <div className="flex items-center justify-center mb-6">
+              <iframe
+                src={activeItem.detailUrl}
+                className="w-full h-[570vh] md:h-[330vh] lg:h-[140vh] text-white border-none"
+              ></iframe>
+            </div>
           </div>
         </Modal>
       </div>
