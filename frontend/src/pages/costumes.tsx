@@ -261,12 +261,12 @@ const Costumes = () => {
                     <Image
                       src={value.img}
                       alt={"Gallery Picture"}
-                      className="w-72"
+                      className="w-72 h-96 object-cover overflow-hidden"
                     />
                   </div>
                 ))}
               </Slider>
-              <div className="hidden lg:block absolute top-1/2 left-0">
+              <div className="absolute top-1/2 left-0">
                   <button
                     className={`text-[#FFCB15] my-4 py-4 px-8 font-bold`}
                     onClick={() => slider?.current?.slickPrev()}
@@ -274,7 +274,7 @@ const Costumes = () => {
                     <AiOutlineLeft size={32} />
                   </button>
                 </div>
-                <div className="hidden lg:block absolute top-1/2 right-0">
+                <div className="absolute top-1/2 right-0">
                   <button
                     className={`text-[#FFCB15] my-4 py-4 px-8 font-bold`}
                     onClick={() => slider?.current?.slickNext()}
