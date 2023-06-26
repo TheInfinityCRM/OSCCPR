@@ -55,9 +55,8 @@ const Costumes = () => {
   };
   const slider = React.useRef<Slider | null>(null);
   const [currentPage, setCurrentPage] = React.useState(0);
-  const [activeAccordion, setActiveAccordion] = React.useState<boolean>(false);
+  const [activeAccordion, setActiveAccordion] = React.useState<number | null>(null);
   const [isModalOpen, setIsModalOpen] = React.useState(false);
-  const [activeSlide, setActiveSlide] = React.useState(0);
   const [title, setTitle] = React.useState({
     id: 0,
     name: "",
@@ -71,8 +70,12 @@ const Costumes = () => {
  
 
 
-  const handleAccordionClick = (index: boolean) => {
-    setActiveAccordion((prev) => !prev);
+  const handleAccordionClick = (index: number) => {
+    if (index === activeAccordion) {
+      setActiveAccordion(null);
+    } else {
+      setActiveAccordion(index);
+    }
   };
   const itemsPerPage = 5;
 
@@ -123,10 +126,10 @@ const Costumes = () => {
                     </div>
                     <div
                       className="block md:hidden mt-4"
-                      onClick={() => handleAccordionClick(true)}
+                      onClick={() => handleAccordionClick(value.id)}
                     >
                       <Accordion
-                        active={activeAccordion}
+                        active={activeAccordion===value.id}
                         question={"Details"}
                         answer={value.data}
                       />
@@ -163,10 +166,10 @@ const Costumes = () => {
                     </div>
                     <div
                       className="block md:hidden mt-4"
-                      onClick={() => handleAccordionClick(true)}
+                      onClick={() => handleAccordionClick(value.id)}
                     >
                       <Accordion
-                        active={activeAccordion}
+                        active={activeAccordion===value.id}
                         question={"Details"}
                         answer={value.data}
                       />
