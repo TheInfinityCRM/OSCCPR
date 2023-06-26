@@ -90,14 +90,15 @@ const Navbar = () => {
         } lg:hidden px-2 pt-2 pb-3 font-bold text-white flex flex-col space-y-6 transition-all duration-500 ease-in-out`}
       >
         {navData.map((value, key) => (
-          <Link href={value.href} key={key}>
+          <Link href={value.href} key={key} 
+          onClick={() => setIsOpen(false)}
+          >
             <span
               className={`${
                 active === value.href
                   ? "border-b-2 py-1 border-[#DCCA87]"
                   : ""
               } nav-link`}
-              onClick={() => setIsOpen(false)}
             >
               {value.item}
             </span>
