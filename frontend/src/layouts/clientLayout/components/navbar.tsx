@@ -6,6 +6,7 @@ import Image from "next/image";
 import logo from "@assets/imgs/logo.png";
 import navData from "@data/nav.json";
 import { AiOutlineClose } from "react-icons/ai";
+import PromotionalBanner from "./promotionBanner";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +24,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.pageYOffset > 90) {
+      if (window.pageYOffset > 70) {
         setScrolled(true);
       } else {
         setScrolled(false);
