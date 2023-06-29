@@ -12,7 +12,7 @@ const PromotionalBanner = () => {
   }
 
   return (
-    <div className="bg-gray-700 fixed bottom-0 z-50 w-full text-white px-4 py-2 flex items-center justify-between text-sm">
+    <div className="bg-gray-700 fixed bottom-0 z-50 w-full text-white px-4 py-2 flex items-center justify-between text-justify text-sm">
       <p> Exclusive 10% discount for Police/fire, Doctor/RN, First responders, Military and Electric Boat employees.</p>
       <button
         className="text-white ml-2"

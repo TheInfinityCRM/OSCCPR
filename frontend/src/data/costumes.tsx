@@ -8,9 +8,21 @@ import darthvader01 from "@assets/imgs/costumeGallery/Darth Vader01.png"
 import darthvader02 from "@assets/imgs/costumeGallery/Darth Vader02.png"
 import darthvader03 from "@assets/imgs/costumeGallery/Darth Vader03.png"
 
+import batman01 from "@assets/imgs/costumeGallery/batman01.png"
+import batman02 from "@assets/imgs/costumeGallery/batman02.png"
+import batman03 from "@assets/imgs/costumeGallery/batman03.png"
+
+import michealmyres01 from "@assets/imgs/costumeGallery/Michael Myres01.png"
+import michealmyres02 from "@assets/imgs/costumeGallery/Michael Myres02.png"
+
 import jasonvoorhees01 from "@assets/imgs/costumeGallery/Jason Voorhees01.png"
 import jasonvoorhees02 from "@assets/imgs/costumeGallery/Jason Voorhees02.png"
 import jasonvoorhees03 from "@assets/imgs/costumeGallery/Jason Voorhees03.png"
+
+import thegrinch01 from "@assets/imgs/costumeGallery/The Grinch01.png"
+import thegrinch02 from "@assets/imgs/costumeGallery/The Grinch02.png"
+import thegrinch03 from "@assets/imgs/costumeGallery/The Grinch03.png"
+
 
 
 export const costumes = [
@@ -95,7 +107,18 @@ export const costumes = [
       </p>
     ),
     imgs:[
-
+      {
+        id:1,
+        img:batman01
+      },
+      {
+        id:2,
+        img:batman02
+      },
+      {
+        id:3,
+        img:batman03
+      }
     ]
   }, 
   {
@@ -114,7 +137,14 @@ export const costumes = [
       </p>
     ),
     imgs:[
-      
+      {
+        id:1,
+        img:michealmyres01
+      },
+      {
+        id:2,
+        img:michealmyres02
+      }
     ]
   },
   {
@@ -138,8 +168,19 @@ export const costumes = [
         event truly memorable.
       </p>
     ),
-    imgs:[
-      
+    imgs: [
+      {
+        id:1,
+        img:thegrinch01
+      },
+      {
+        id:2,
+        img:thegrinch02
+      },
+      {
+        id:3,
+        img:thegrinch03
+      }
     ]
   },
 ];
