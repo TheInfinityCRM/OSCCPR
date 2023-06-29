@@ -8,9 +8,9 @@ import darthvader01 from "@assets/imgs/costumeGallery/Darth Vader01.png"
 import darthvader02 from "@assets/imgs/costumeGallery/Darth Vader02.png"
 import darthvader03 from "@assets/imgs/costumeGallery/Darth Vader03.png"
 
-import batman01 from "@assets/imgs/costumeGallery/batman01.png"
-import batman02 from "@assets/imgs/costumeGallery/batman02.png"
-import batman03 from "@assets/imgs/costumeGallery/batman03.png"
+import batman01 from "@assets/imgs/costumeGallery/Batman01.png"
+import batman02 from "@assets/imgs/costumeGallery/Batman02.png"
+import batman03 from "@assets/imgs/costumeGallery/Batman03.png"
 
 import michealmyres01 from "@assets/imgs/costumeGallery/Michael Myres01.png"
 import michealmyres02 from "@assets/imgs/costumeGallery/Michael Myres02.png"
