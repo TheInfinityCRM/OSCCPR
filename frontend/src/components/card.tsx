@@ -36,7 +36,7 @@ const Card: React.FC<ICardProps> = ({
           </div>
         </div>
       ) : type === "rental" ? (
-        <div className="w-full lg:w-72 h-auto">
+        <div className="w-full lg:w-80 xl:w-96 h-auto">
           <div className="grid grid-cols-1 place-items-center gap-y-4 py-6 rounded-lg bg-gradient-to-b from-black to-gray-800">
             <div className="relative">
               <Image
@@ -44,7 +44,7 @@ const Card: React.FC<ICardProps> = ({
                 alt={rentalName || "Rental"}
                 className={`${
                   rentalStatus === "Sold Out" ? "opacity-25" : ""
-                } w-full md:w-72 h-60 rounded-t-lg`}
+                } w-full object-cover h-60 rounded-t-lg`}
               />
               {rentalStatus === "Sold Out" ? (
                 <p className="absolute top-2 left-2 bg-black py-1 px-2 text-[#FFCB05] text-xs">

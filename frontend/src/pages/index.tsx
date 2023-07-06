@@ -170,7 +170,7 @@ const Home: NextPageWithLayout = () => {
               lets create magic!
             </p>
           </div>
-          <div id="water slides and bounce houses" className="py-6 md:py-10" >
+          <div id="Inflatables and More" className="py-6 md:py-10" >
             <div className="flex justify-center text-center items-center py-6" data-aos="fade">
               <Heading title="Inflatables &amp; More" />
             </div>
@@ -214,7 +214,7 @@ const Home: NextPageWithLayout = () => {
                     <p
                       className={`absolute ${
                         slidesData === value.id ? "" : "block md:hidden"
-                      } bottom-1 right-3 mb-2 ml-2 text-[#FFCB05] text-sm font-roboto`}
+                      } bottom-1 right-3 2xl:right-32 mb-2 ml-2 text-[#FFCB05] text-sm font-roboto`}
                     >
                       View more ➧
                     </p>
@@ -223,7 +223,7 @@ const Home: NextPageWithLayout = () => {
               ))}
             </div>
           </div>
-          <div id="events" className="py-6 md:py-10">
+          {/* <div id="events" className="py-6 md:py-10">
             <div className="flex justify-center items-center py-6" data-aos="fade">
               <Heading title="Events We Cater To..." />
             </div>
@@ -250,7 +250,7 @@ const Home: NextPageWithLayout = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
           <section id="faq" className="py-6 md:py-10">
             <div className="flex justify-center items-center py-6" data-aos="fade">
               <Heading title="Have a question?" />
@@ -279,7 +279,7 @@ const Home: NextPageWithLayout = () => {
             <div data-aos="fade">
               <Slider {...settings}>
                 {reviews.map((value) => (
-                  <div key={value.id} className="px-2">
+                  <div key={value.id}>
                     <Card
                       type={"review"}
                       review={value.review}

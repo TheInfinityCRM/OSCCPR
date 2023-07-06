@@ -84,7 +84,7 @@ const Rentals = () => {
       <div className="py-6 bg-black pb-28">
         <div className="container text-white mt-24">
           <div className="grid grid-cols-12">
-            <div className="col-span-12 xl:col-span-2">
+            {/* <div className="col-span-12 xl:col-span-2">
               <button
                 onClick={() => setAdultItems((prevState) => !prevState)}
                 className={`border-2 rounded-md xl:my-6 ${
@@ -100,8 +100,8 @@ const Rentals = () => {
                 )}
                 18+ Rentals
               </button>
-            </div>
-            <div className="col-span-12 xl:col-span-10">
+            </div> */}
+            <div className="col-span-12 xl:col-span-12">
               <div className="text-2xl flex ml-auto mt-4 xl:my-6 mb-12">
                 <label htmlFor="simple-search" className="sr-only">
                   Search
@@ -136,7 +136,7 @@ const Rentals = () => {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12 pb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 pb-12">
             {currentItems.map((item) => (
               <div data-aos="fade" key={item.id}>
                 <Card
