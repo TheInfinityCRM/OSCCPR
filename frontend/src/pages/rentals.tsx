@@ -81,7 +81,7 @@ const Rentals = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <div className="py-6 bg-black 2xl:h-screen pb-28">
+      <div className="py-6 bg-black pb-28">
         <div className="container text-white mt-24">
           <div className="grid grid-cols-12">
             <div className="col-span-12 xl:col-span-2">
