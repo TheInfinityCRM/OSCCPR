@@ -48,9 +48,9 @@ const Rentals = () => {
     })
     .filter((item) => {
       if (adultItems) {
-        return item.category === "Adult";
+        return item.category === 2;
       } else {
-        return item.category === "Normal";
+        return item.category === 1;
       }
     });
   const totalPages = Math.ceil(filteredItems.length / itemsPerPage);

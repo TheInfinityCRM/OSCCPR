@@ -75,8 +75,6 @@ const Home: NextPageWithLayout = () => {
     Aos.init({ duration: 2000 });
   }, []);
 
-  
-
   const handleAccordionClick = (index: number) => {
     if (index === activeAccordion) {
       setActiveAccordion(null);
@@ -136,7 +134,10 @@ const Home: NextPageWithLayout = () => {
                       : "object-right"
                   } md:"object-center"`}
                 />
-                <div className="absolute inset-0 flex flex-col items-center justify-center" data-aos="fade">
+                <div
+                  className="absolute inset-0 flex flex-col items-center justify-center"
+                  data-aos="fade"
+                >
                   <div
                     className="text-white font-bold font-montserrat text-3xl md:text-5xl w-auto text-center mb-6"
                     style={{ lineHeight: "4rem" }}
@@ -155,10 +156,16 @@ const Home: NextPageWithLayout = () => {
       <div className="bg-black">
         <div className="container">
           <div className="py-6 md:py-10" id="about">
-            <div className="flex justify-center items-center py-6" data-aos="fade">
+            <div
+              className="flex justify-center items-center py-6"
+              data-aos="fade"
+            >
               <Heading title="About Us" />
             </div>
-            <p className="text-white font-montserrat leading-7 mx-6 py-6 text-justify" data-aos="fade">
+            <p
+              className="text-white font-montserrat leading-7 mx-6 py-6 text-justify"
+              data-aos="fade"
+            >
               Welcome to Ocean State Costume Characters and Party Rentals, your
               hub for extraordinary celebrations. We specialize in sprinkling
               magic on your events with our range of high quality costume
@@ -170,11 +177,22 @@ const Home: NextPageWithLayout = () => {
               lets create magic!
             </p>
           </div>
-          <div id="Inflatables and More" className="py-6 md:py-10" >
-            <div className="flex justify-center text-center items-center py-6" data-aos="fade">
+          <div id="subheader" className="pb-6 md:pb-28">
+          <div className="flex justify-center items-center mt-28" data-aos="fade">
+              <h1 className="border-2 md:border-4 text-white rounded-md md:font-semibold px-4 md:px-8 py-3 md:py-6 text-2xl md:text-3xl lg:text-5xl font-montserrat">Serving RI and select partis of CT and MA</h1>
+          </div>
+          </div>
+          <div id="Inflatables and More" className="py-6 md:py-10">
+            <div
+              className="flex justify-center text-center items-center py-6"
+              data-aos="fade"
+            >
               <Heading title="Inflatables &amp; More" />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 py-6" data-aos="fade">
+            <div
+              className="grid grid-cols-1 md:grid-cols-2 gap-3 py-6"
+              data-aos="fade"
+            >
               {homeSlides.map((value) => (
                 <div
                   className="relative"
@@ -186,10 +204,21 @@ const Home: NextPageWithLayout = () => {
                     <Image
                       src={value.Image}
                       alt={value.alt}
-                      className="bg-black object-cover overflow-hidden hover:opacity-40 hover:transition hover:ease-in-out hover:duration-300"
+                      className={`${
+                        value.status === 2 ? "opacity-50" : ""
+                      } bg-black object-cover overflow-hidden hover:opacity-40 hover:transition hover:ease-in-out hover:duration-300`}
                     />
                   </Link>
                   <>
+                    {value.status === 2 && (
+                      <h3
+                        className={`absolute ${
+                          slidesData === value.id ? "" : "block md:hidden"
+                        } text-[#FFCB15] font-semibold font-roboto text-2xl inset-0 flex items-center justify-center`}
+                      >
+                        Sold Out
+                      </h3>
+                    )}
                     <p
                       className={`absolute ${
                         slidesData === value.id ? "" : "block md:hidden"
@@ -197,27 +226,33 @@ const Home: NextPageWithLayout = () => {
                     >
                       {value.title}
                     </p>
-                    <p
-                      className={`absolute ${
-                        slidesData === value.id ? "" : "block md:hidden"
-                      } bottom-6 left-0 mb-2 ml-2 text-white text-sm font-roboto`}
-                    >
-                      One day Rental: {value.oneDayRent}
-                    </p>
-                    <p
-                      className={`absolute ${
-                        slidesData === value.id ? "" : "block md:hidden"
-                      } bottom-1 left-0 mb-2 ml-2 text-white text-sm font-roboto`}
-                    >
-                      Two day Rental: {value.twoDayRent}
-                    </p>
-                    <p
-                      className={`absolute ${
-                        slidesData === value.id ? "" : "block md:hidden"
-                      } bottom-1 right-3 2xl:right-32 mb-2 ml-2 text-[#FFCB05] text-sm font-roboto`}
-                    >
-                      View more ➧
-                    </p>
+                    {value.status === 1 && (
+                      <>
+                        <p
+                          className={`absolute ${
+                            slidesData === value.id ? "" : "block md:hidden"
+                          } bottom-6 left-0 mb-2 ml-2 text-white text-sm font-roboto`}
+                        >
+                          One day Rental: {value.oneDayRent}
+                        </p>
+                        <p
+                          className={`absolute ${
+                            slidesData === value.id ? "" : "block md:hidden"
+                          } bottom-1 left-0 mb-2 ml-2 text-white text-sm font-roboto`}
+                        >
+                          Two day Rental: {value.twoDayRent}
+                        </p>
+                      </>
+                    )}
+                    {value.status === 1 && (
+                      <p
+                        className={`absolute ${
+                          slidesData === value.id ? "" : "block md:hidden"
+                        } bottom-1 right-3 2xl:right-32 mb-2 ml-2 text-[#FFCB05] text-sm font-roboto`}
+                      >
+                        View more ➧
+                      </p>
+                    )}
                   </>
                 </div>
               ))}
@@ -252,7 +287,10 @@ const Home: NextPageWithLayout = () => {
             </div>
           </div> */}
           <section id="faq" className="py-6 md:py-10">
-            <div className="flex justify-center items-center py-6" data-aos="fade">
+            <div
+              className="flex justify-center items-center py-6"
+              data-aos="fade"
+            >
               <Heading title="Have a question?" />
             </div>
             <div className="grid gap-y-2 pb-20" data-aos="fade">
@@ -273,7 +311,10 @@ const Home: NextPageWithLayout = () => {
                 Success
               </h3>
             </div>
-            <div className="flex justify-center text-center items-center py-3" data-aos="fade">
+            <div
+              className="flex justify-center text-center items-center py-3"
+              data-aos="fade"
+            >
               <Heading title="Don't just take our word for it..." />
             </div>
             <div data-aos="fade">
@@ -291,7 +332,10 @@ const Home: NextPageWithLayout = () => {
             </div>
           </div>
           <section id="contact" className="py-6 md:py-10">
-            <div className="flex justify-center items-center py-6" data-aos="fade">
+            <div
+              className="flex justify-center items-center py-6"
+              data-aos="fade"
+            >
               <Heading title="Get in touch..." />
             </div>
             <div className="flex justify-center items-center" data-aos="fade">
@@ -299,7 +343,10 @@ const Home: NextPageWithLayout = () => {
                 Fill out this form to inquire about out services!
               </h3>
             </div>
-            <div className="py-2 flex justify-center items-center" data-aos="fade">
+            <div
+              className="py-2 flex justify-center items-center"
+              data-aos="fade"
+            >
               <iframe
                 src="https://api.leadconnectorhq.com/widget/form/ai1gyJlD8zQcumUrRque"
                 className="w-full h-[80vh] md:h-[50vh]  lg:h-[68vh] text-white"
@@ -318,7 +365,10 @@ const Home: NextPageWithLayout = () => {
                 title="Contact Form"
               ></iframe>
             </div>
-            <div className="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-6" data-aos="fade">
+            <div
+              className="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-6"
+              data-aos="fade"
+            >
               <Card
                 type="contact"
                 icon={<FiPhone size={40} />}
@@ -344,52 +394,52 @@ const Home: NextPageWithLayout = () => {
       <div>
         <Modal isOpen={isModalOpen} scroll={true}>
           <div className="container" data-aos="fade">
-          <div onClick={closeModal}>
-            <p className="flex items-center font-montserrat text-sm cursor-pointer">
-              <FiArrowLeft size={20} className="text-[#FFCB05]" /> GO BACK
-            </p>
-          </div>
-          <div className="flex items-center justify-center my-3">
-            <h2 className="text-2xl text-[#FFCB05] border-b-2 mb-6 border-[#FFCB05] font-bold font-montserrat">
-              {title?.title}
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-12">
-            {eventDetail
-              .filter((val) =>
-                title.title === "All Events"
-                  ? val
-                  : val.category === title.title
-              )
-              .map((value) => (
-                <div key={value.id}>
-                  <Card
-                    type={"events"}
-                    eventName={value.name}
-                    eventImg={value.image}
-                  />
-                </div>
-              ))}
-          </div>
-          <div className="py-2 flex justify-center items-center">
-            <iframe
-              src="https://api.leadconnectorhq.com/widget/form/ai1gyJlD8zQcumUrRque"
-              className="w-full h-[80vh] md:h-[50vh]  lg:h-[68vh]"
-              id="inline-ai1gyJlD8zQcumUrRque"
-              data-layout="{'id':'INLINE'}"
-              data-trigger-type="alwaysShow"
-              data-trigger-value=""
-              data-activation-type="alwaysActivated"
-              data-activation-value=""
-              data-deactivation-type="neverDeactivate"
-              data-deactivation-value=""
-              data-form-name="Contact Form"
-              data-height="567"
-              data-layout-iframe-id="inline-ai1gyJlD8zQcumUrRque"
-              data-form-id="ai1gyJlD8zQcumUrRque"
-              title="Contact Form"
-            ></iframe>
-          </div>
+            <div onClick={closeModal}>
+              <p className="flex items-center font-montserrat text-sm cursor-pointer">
+                <FiArrowLeft size={20} className="text-[#FFCB05]" /> GO BACK
+              </p>
+            </div>
+            <div className="flex items-center justify-center my-3">
+              <h2 className="text-2xl text-[#FFCB05] border-b-2 mb-6 border-[#FFCB05] font-bold font-montserrat">
+                {title?.title}
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-12">
+              {eventDetail
+                .filter((val) =>
+                  title.title === "All Events"
+                    ? val
+                    : val.category === title.title
+                )
+                .map((value) => (
+                  <div key={value.id}>
+                    <Card
+                      type={"events"}
+                      eventName={value.name}
+                      eventImg={value.image}
+                    />
+                  </div>
+                ))}
+            </div>
+            <div className="py-2 flex justify-center items-center">
+              <iframe
+                src="https://api.leadconnectorhq.com/widget/form/ai1gyJlD8zQcumUrRque"
+                className="w-full h-[80vh] md:h-[50vh]  lg:h-[68vh]"
+                id="inline-ai1gyJlD8zQcumUrRque"
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="Contact Form"
+                data-height="567"
+                data-layout-iframe-id="inline-ai1gyJlD8zQcumUrRque"
+                data-form-id="ai1gyJlD8zQcumUrRque"
+                title="Contact Form"
+              ></iframe>
+            </div>
           </div>
         </Modal>
       </div>

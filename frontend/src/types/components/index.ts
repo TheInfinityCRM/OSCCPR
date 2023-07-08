@@ -23,7 +23,7 @@ export interface ICardProps {
     rentalImg?:string | StaticImageData,
     rentalName?:string,
     rentalPrice?:string,
-    rentalStatus?:string,
+    rentalStatus?:number,
     openModal?: any,
     eventName?:string,
     eventImg?:string | StaticImageData,

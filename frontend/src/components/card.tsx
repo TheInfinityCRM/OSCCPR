@@ -43,12 +43,12 @@ const Card: React.FC<ICardProps> = ({
                 src={rentalImg || placeholder}
                 alt={rentalName || "Rental"}
                 className={`${
-                  rentalStatus === "Sold Out" ? "opacity-25" : ""
+                  rentalStatus === 2 ? "opacity-25" : ""
                 } w-full object-cover h-60 rounded-t-lg`}
               />
-              {rentalStatus === "Sold Out" ? (
+              {rentalStatus === 2 ? (
                 <p className="absolute top-2 left-2 bg-black py-1 px-2 text-[#FFCB05] text-xs">
-                  {rentalStatus}
+                  Sold Out
                 </p>
               ) : (
                 <></>

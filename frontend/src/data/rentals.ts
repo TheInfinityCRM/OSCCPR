@@ -15,15 +15,14 @@ import rental03Booking from '@assets/imgs/rentalBooking/Bounce House With Slide.
 
 
 
-const category = {
-    1:"Normal",
-    2:"Adult",
+enum category  {
+    "Normal"=1,
+    "Adult"=2,
 }
-const status = {
-    1:"Available",
-    2:"Sold Out"
+enum status  {
+    "Available"=1,
+    "SoldOut"=2
 }
-
 export const rentalItems = [
     {
         id:1,
@@ -35,8 +34,8 @@ export const rentalItems = [
         dimensions:"25' long, 9' wide, 15' tall",
         bookingImg:rental01Booking,
         detailUrl:'https://api.leadconnectorhq.com/widget/booking/ZMjAecjJsumgt2Cn1Z8Y',
-        category:category[1],
-        status:status[1]
+        category:category.Normal,
+        status:status.Available   
     },
     {
         id:2,
@@ -48,8 +47,8 @@ export const rentalItems = [
         dimensions:"8' long, 8' wide, 9' tall",
         bookingImg:rental02Booking,
         detailUrl:'https://api.leadconnectorhq.com/widget/booking/cIxZmcCLhgPPmC6LWXSj',
-        category:category[1],
-        status:status[1]
+        category:category.Normal,
+        status:status.Available
     },
     {
         id:3,
@@ -61,8 +60,8 @@ export const rentalItems = [
         dimensions:"27' long, 13' wide, 14' tall",
         bookingImg:rental03Booking,
         detailUrl:'https://api.leadconnectorhq.com/widget/booking/irOG8ZeghybQ7wgbOL2Z',
-        category:category[1],
-        status:status[1]
+        category:category.Normal,
+        status:status.Available
     },
 
     {
@@ -73,8 +72,8 @@ export const rentalItems = [
         withled:'$90.00',
         bookingImg:rental07,
         detailUrl:'https://api.leadconnectorhq.com/widget/booking/8qYkWYjYvz3uKg03qbhm',
-        category:category[2],
-        status:status[1]
+        category:category.Adult,
+        status:status.Available
     },
     {
         id:8,
@@ -84,8 +83,8 @@ export const rentalItems = [
         withled:'$90.00',
         bookingImg:rental08,
         detailUrl:'https://api.leadconnectorhq.com/widget/booking/2TOD7m6EYgB0mqzY8u3G',
-        category:category[2],
-        status:status[1]
+        category:category.Adult,
+        status:status.Available
     },
     {
         id:9,
@@ -94,8 +93,8 @@ export const rentalItems = [
         price:'$50.00',
         bookingImg:rental09,
         detailUrl:'',
-        category:category[1],
-        status:status[1]
+        category:category.Normal,
+        status:status.Available
     },
     {
         id:10,
@@ -105,8 +104,8 @@ export const rentalItems = [
         withLed:'$65.00',
         bookingImg:rental10,
         detailUrl:'',
-        category:category[1],
-        status:status[1]
+        category:category.Normal,
+        status:status.Available
     },
     
 ]
