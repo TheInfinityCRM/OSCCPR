@@ -177,10 +177,15 @@ const Home: NextPageWithLayout = () => {
               lets create magic!
             </p>
           </div>
-          <div id="subheader" className="pb-6 md:pb-28">
-          <div className="flex justify-center items-center mt-28" data-aos="fade">
-              <h1 className="border-2 md:border-4 text-white rounded-md md:font-semibold px-4 md:px-8 py-3 md:py-6 text-2xl md:text-3xl lg:text-5xl font-montserrat">Serving RI and select partis of CT and MA</h1>
-          </div>
+          <div id="subheader" className="pb-28">
+            <div
+              className="flex justify-center items-center mt-28"
+              data-aos="fade"
+            >
+              <h1 className="border-2 md:border-4 text-white text-justify rounded-md md:font-semibold px-4 md:px-8 py-3 md:py-6 text-2xl md:text-3xl lg:text-5xl font-montserrat">
+                Serving RI and select partis of CT and MA
+              </h1>
+            </div>
           </div>
           <div id="Inflatables and More" className="py-6 md:py-10">
             <div
