@@ -183,7 +183,7 @@ const Home: NextPageWithLayout = () => {
               data-aos="fade"
             >
               <h1 className="border-2 md:border-4 text-white text-justify rounded-md md:font-semibold px-4 md:px-8 py-3 md:py-6 text-2xl md:text-3xl lg:text-5xl font-montserrat">
-                Serving RI and select partis of CT and MA
+                Serving RI and select parts of CT and MA
               </h1>
             </div>
           </div>
