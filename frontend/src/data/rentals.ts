@@ -10,10 +10,16 @@ import rental09 from '@assets/imgs/rentals/speaker.png'
 import rental10 from '@assets/imgs/rentals/regular ice luge.png'
 import rental11 from '@assets/imgs/rentals/Toddler Water Slide.png'
 import rental12 from '@assets/imgs/rentals/chuckyprop.png'
+import rental13 from '@assets/imgs/rentals/castle and tropical infero slides.png'
+import rental14 from '@assets/imgs/rentals/bounce house and toddler waterslide.png'
 import rental01Booking from '@assets/imgs/rentalBooking/Two Lane Racing Slide.png'
 import rental02Booking from '@assets/imgs/rentalBooking/Kids Bounce House.png'
 import rental03Booking from '@assets/imgs/rentalBooking/Bounce House With Slide.png'
 import rental04Booking from '@assets/imgs/rentalBooking/Toddler Water Slide 2.png'
+import rental05Booking from '@assets/imgs/rentalBooking/bounce house and tropical infero.png'
+import rental06Booking from '@assets/imgs/rentalBooking/bounce house and toddler waterslide.png'
+
+
 
 
 
@@ -23,7 +29,8 @@ enum category  {
 }
 enum status  {
     "Available"=1,
-    "SoldOut"=2
+    "SoldOut"=2,
+    "Combo"=3
 }
 export const rentalItems = [
     {
@@ -54,7 +61,7 @@ export const rentalItems = [
     },
 
     {
-        id:11,
+        id:3,
         image:rental11,
         name:'Toddler Water Slide',
         price:'$100.00',
@@ -68,12 +75,13 @@ export const rentalItems = [
     },
     
     {
-        id:3,
+        id:4,
         image:rental03,
         name:'Castle Bounce House/Slide',
         price:'$200.00',
         twoDayRental:'$300.00',
         weekendRental:'$400.00',
+        additionalCost:'+$50 to use it wet',
         dimensions:"27' long, 13' wide, 14' tall",
         bookingImg:rental03Booking,
         detailUrl:'https://api.leadconnectorhq.com/widget/booking/irOG8ZeghybQ7wgbOL2Z',
@@ -82,7 +90,7 @@ export const rentalItems = [
     },
 
     {
-        id:7,
+        id:5,
         image:rental07,
         name:'Bachelorette Ice Luge',
         price:'$75.00',
@@ -93,7 +101,7 @@ export const rentalItems = [
         status:status.Available
     },
     {
-        id:8,
+        id:6,
         image:rental08,
         name:'Bachelor Ice Luge',
         price:'$75.00',
@@ -105,7 +113,7 @@ export const rentalItems = [
     },
 
     {
-        id:12,
+        id:7,
         image:rental12,
         name:'Chucky Prop',
         price:'$25.00',
@@ -117,7 +125,7 @@ export const rentalItems = [
     },
     
     {
-        id:9,
+        id:8,
         image:rental09,
         name:'15" Bluetooth party speaker',
         price:'$50.00',
@@ -127,7 +135,7 @@ export const rentalItems = [
         status:status.Available
     },
     {
-        id:10,
+        id:9,
         image:rental10,
         name:'Regular Ice Luge',
         price:'$50.00',
@@ -137,5 +145,29 @@ export const rentalItems = [
         category:category.Normal,
         status:status.Available
     },
+    {
+        id:10,
+        image:rental13,
+        name:'Castle bounce house & Tropical infero slide',
+        price:'$450',
+        twoDayRental:'$700',
+        weekendRental:'$900',
+        detailUrl:'',
+        bookingImg:rental05Booking,
+        category:category.Normal,
+        status:status.Combo
+    },
+    {
+        id:11,
+        image:rental14,
+        name:'Castle bounce house & Toddler waterslide',
+        price:'$150',
+        twoDayRental:'$225',
+        weekendRental:'$300',
+        detailUrl:'',
+        bookingImg:rental06Booking,
+        category:category.Normal,
+        status:status.Combo
+    }
     
 ]

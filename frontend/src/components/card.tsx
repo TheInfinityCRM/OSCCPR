@@ -50,12 +50,16 @@ const Card: React.FC<ICardProps> = ({
                 <p className="absolute top-2 left-2 bg-black py-1 px-2 text-[#FFCB05] text-xs">
                   Sold Out
                 </p>
+              ) : rentalStatus === 3 ? (
+                <p className="absolute top-0 left-0 bg-black py-1 px-2 text-[#FFCB05] text-sm">
+                Combo
+              </p>
               ) : (
                 <></>
               )}
             </div>
             <div className="text-white">
-              <h3 className="text-lg font-montserrat font-bold">
+              <h3 className="text-base text-center font-montserrat font-bold">
                 {rentalName}
               </h3>
             </div>

@@ -14,7 +14,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, children, scroll }) => {
 
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 mt-12">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
       <div className={`bg-black text-white w-full h-[80vh] lg:mx-16 ${scroll? "overflow-y-scroll":"overflow-y-none"} p-4`}>
         {children}
       </div>

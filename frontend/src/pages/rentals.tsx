@@ -27,9 +27,10 @@ const Rentals = () => {
     dimensions: "",
     twoDayRental: "",
     weekendRental: "",
+    additionalCost:""
   });
 
-  const itemsPerPage = 8;
+  const itemsPerPage = 9;
 
   React.useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -200,6 +201,11 @@ const Rentals = () => {
                   )}
                   {activeItem?.weekendRental ? (
                     <p>Weekend Rental: {activeItem?.weekendRental}</p>
+                  ) : (
+                    <></>
+                  )}
+                  {activeItem?.additionalCost ? (
+                    <p>{activeItem?.additionalCost}</p>
                   ) : (
                     <></>
                   )}
