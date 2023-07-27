@@ -9,6 +9,7 @@ import rental08 from '@assets/imgs/rentals/Boob Ice Luge.png'
 import rental09 from '@assets/imgs/rentals/speaker.png'
 import rental10 from '@assets/imgs/rentals/regular ice luge.png'
 import rental11 from '@assets/imgs/rentals/Toddler Water Slide.png'
+import rental12 from '@assets/imgs/rentals/chuckyprop'
 import rental01Booking from '@assets/imgs/rentalBooking/Two Lane Racing Slide.png'
 import rental02Booking from '@assets/imgs/rentalBooking/Kids Bounce House.png'
 import rental03Booking from '@assets/imgs/rentalBooking/Bounce House With Slide.png'
@@ -102,6 +103,18 @@ export const rentalItems = [
         category:category.Adult,
         status:status.Available
     },
+
+    {
+        id:12,
+        image:rental12,
+        name:'Chucky Prop',
+        price:'$25.00',
+        dimensions:"$25 WITH ANY HORROR CHARACTER APPEARANCE",
+        bookingImg:rental03Booking,
+        category:category.Normal,
+        status:status.Available
+    },
+    
     {
         id:9,
         image:rental09,
