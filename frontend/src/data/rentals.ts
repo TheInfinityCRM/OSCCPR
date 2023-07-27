@@ -60,7 +60,7 @@ export const rentalItems = [
         price:'$100.00',
         twoDayRental:'$150.00',
         weekendRental:'$200.00',
-        dimensions:"8' long, 8' wide, 9' tall",
+        dimensions:"14' long, 9' wide, 8' tall",
         bookingImg:rental04Booking,
         detailUrl:'https://api.leadconnectorhq.com/widget/booking/9ZJgDDEe8Z7HX7Hn9HUF',
         category:category.Normal,
