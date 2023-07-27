@@ -110,7 +110,8 @@ export const rentalItems = [
         name:'Chucky Prop',
         price:'$25.00',
         dimensions:"$25 WITH ANY HORROR CHARACTER APPEARANCE",
-        bookingImg:rental03Booking,
+        bookingImg:rental12,
+        detailUrl:'',
         category:category.Normal,
         status:status.Available
     },
