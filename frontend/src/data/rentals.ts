@@ -8,10 +8,11 @@ import rental07 from '@assets/imgs/rentals/Penis Ice Luge.png'
 import rental08 from '@assets/imgs/rentals/Boob Ice Luge.png'
 import rental09 from '@assets/imgs/rentals/speaker.png'
 import rental10 from '@assets/imgs/rentals/regular ice luge.png'
-
+import rental11 from '@assets/imgs/rentals/Toddler Water Slide.png'
 import rental01Booking from '@assets/imgs/rentalBooking/Two Lane Racing Slide.png'
 import rental02Booking from '@assets/imgs/rentalBooking/Kids Bounce House.png'
 import rental03Booking from '@assets/imgs/rentalBooking/Bounce House With Slide.png'
+import rental04Booking from '@assets/imgs/rentalBooking/Toddler Water Slide 2.png'
 
 
 
@@ -50,6 +51,21 @@ export const rentalItems = [
         category:category.Normal,
         status:status.Available
     },
+
+    {
+        id:11,
+        image:rental11,
+        name:'Toddler Water Slide',
+        price:'$100.00',
+        twoDayRental:'$150.00',
+        weekendRental:'$200.00',
+        dimensions:"8' long, 8' wide, 9' tall",
+        bookingImg:rental04Booking,
+        detailUrl:'https://api.leadconnectorhq.com/widget/booking/9ZJgDDEe8Z7HX7Hn9HUF',
+        category:category.Normal,
+        status:status.Available
+    },
+    
     {
         id:3,
         image:rental03,
