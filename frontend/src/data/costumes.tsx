@@ -23,7 +23,8 @@ import thegrinch01 from "@assets/imgs/costumeGallery/The Grinch01.png"
 import thegrinch02 from "@assets/imgs/costumeGallery/The Grinch02.png"
 import thegrinch03 from "@assets/imgs/costumeGallery/The Grinch03.png"
 
-
+import chucky01 from "@assets/imgs/costumeGallery/chucky01.png"
+import chucky02 from "@assets/imgs/costumeGallery/chucky02.png"
 
 export const costumes = [
   {
@@ -183,4 +184,32 @@ export const costumes = [
       }
     ]
   },
+
+  {
+    id: 6,
+    name: "Chucky Prop",
+    image: costume06,
+    href:'chuckyprop',
+    data: (
+      <p className="leading-loose font-montserrat my-4 text-justify">
+Dive into a world of thrills and chills with our Chucky prop experience. Embark on a thrilling journey with the infamous redhead, as he makes a captivating appearance at your event. <br></br>
+<br></br>
+Our expertly crafted Chucky prop mirrors the details of this legendary horror icon, from his wild red hair and freckles to his classic striped attire. Stir your guests with an exciting scare and extraordinary interactions. <br></br>
+<br></br>
+Reach out to us today to claim your place in the unnerving universe of Chucky. Let the fright and fascination of this renowned character turn your event into an unforgettable spectacle. Add Hucky to any costume character appearance for $25 !!!
+      </p>
+    ),
+    imgs: [
+      {
+        id:1,
+        img:thegrinch01
+      },
+      {
+        id:2,
+        img:thegrinch02
+      },
+
+    ]
+  },
+  
 ];
