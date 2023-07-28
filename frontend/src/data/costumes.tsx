@@ -197,7 +197,7 @@ Dive into a world of thrills and chills with our Chucky prop experience. Embark 
 <br></br>
 Our expertly crafted Chucky prop mirrors the details of this legendary horror icon, from his wild red hair and freckles to his classic striped attire. Stir your guests with an exciting scare and extraordinary interactions. <br></br>
 <br></br>
-Reach out to us today to claim your place in the unnerving universe of Chucky. Let the fright and fascination of this renowned character turn your event into an unforgettable spectacle. Add Hucky to any costume character appearance for $25 !!!
+Reach out to us today to claim your place in the unnerving universe of Chucky. Let the fright and fascination of this renowned character turn your event into an unforgettable spectacle. Add Chucky to any costume character appearance for $25 !!!
       </p>
     ),
     imgs: [
