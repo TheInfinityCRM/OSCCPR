@@ -3,6 +3,7 @@ import costume02 from "@assets/imgs/costumes/Jason Voorhees.png";
 import costume03 from "@assets/imgs/costumes/Batman.png";
 import costume04 from "@assets/imgs/costumes/Micheal Myers.png";
 import costume05 from "@assets/imgs/costumes/Grinch.png";
+import costume06 from "@assets/imgs/costumes/Chucky.png";
 
 import darthvader01 from "@assets/imgs/costumeGallery/Darth Vader01.png"
 import darthvader02 from "@assets/imgs/costumeGallery/Darth Vader02.png"
@@ -189,7 +190,7 @@ export const costumes = [
     id: 6,
     name: "Chucky Prop",
     image: costume06,
-    href:'chuckyprop',
+    href:'chucky',
     data: (
       <p className="leading-loose font-montserrat my-4 text-justify">
 Dive into a world of thrills and chills with our Chucky prop experience. Embark on a thrilling journey with the infamous redhead, as he makes a captivating appearance at your event. <br></br>
