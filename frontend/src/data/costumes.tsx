@@ -203,11 +203,11 @@ Reach out to us today to claim your place in the unnerving universe of Chucky. L
     imgs: [
       {
         id:1,
-        img:thegrinch01
+        img:chucky01
       },
       {
         id:2,
-        img:thegrinch02
+        img:chucky02
       },
 
     ]
