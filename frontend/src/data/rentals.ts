@@ -148,7 +148,7 @@ export const rentalItems = [
     {
         id:10,
         image:rental13,
-        name:'Castle bounce house & Tropical infero slide',
+        name:'Castle Bounce House & Tropical Waterslide',
         price:'$450',
         twoDayRental:'$700',
         weekendRental:'$900',
@@ -160,7 +160,7 @@ export const rentalItems = [
     {
         id:11,
         image:rental14,
-        name:'Castle bounce house & Toddler waterslide',
+        name:'Toddler Bounce House & Waterslide',
         price:'$150',
         twoDayRental:'$225',
         weekendRental:'$300',
