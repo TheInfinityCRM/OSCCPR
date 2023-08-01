@@ -152,7 +152,7 @@ export const rentalItems = [
         price:'$450',
         twoDayRental:'$700',
         weekendRental:'$900',
-        additionalCost:'+$50 if Castle Bounce House is used wet',
+        additionalCost:'+$50 if Castle Bounce House slide is used wet',
         detailUrl:'',
         bookingImg:rental05Booking,
         category:category.Normal,
