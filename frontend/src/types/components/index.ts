@@ -28,5 +28,6 @@ export interface ICardProps {
     eventName?:string,
     eventImg?:string | StaticImageData,
     review?:string,
-    rating?:any
+    rating?:any,
+    reviewImg?:string | StaticImageData
 }

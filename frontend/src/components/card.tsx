@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import placeholder from "@assets/imgs/logo.png";
 import { AiFillStar } from "react-icons/ai";
+import Button from "./button";
 
 const Card: React.FC<ICardProps> = ({
   type,
@@ -17,8 +18,11 @@ const Card: React.FC<ICardProps> = ({
   eventName,
   eventImg,
   review,
-  rating
+  rating,
+  reviewImg,
 }) => {
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
+
   const handleClick = () => {
     if (openModal) {
       openModal();
@@ -44,7 +48,7 @@ const Card: React.FC<ICardProps> = ({
                 alt={rentalName || "Rental"}
                 className={`${
                   rentalStatus === 2 ? "opacity-25" : ""
-                } w-full object-cover h-60 rounded-t-lg`}
+                } w-full object-cover h-60 rounded-t-lg p-2`}
               />
               {rentalStatus === 2 ? (
                 <p className="absolute top-2 left-2 bg-black py-1 px-2 text-[#FFCB05] text-xs">
@@ -52,8 +56,8 @@ const Card: React.FC<ICardProps> = ({
                 </p>
               ) : rentalStatus === 3 ? (
                 <p className="absolute top-0 left-0 bg-black py-1 px-2 text-[#FFCB05] text-sm">
-                Combo
-              </p>
+                  Combo
+                </p>
               ) : (
                 <></>
               )}
@@ -91,17 +95,26 @@ const Card: React.FC<ICardProps> = ({
         </div>
       ) : type === "review" ? (
         <div className="w-full lg:w-96 text-white">
-          <div className="grid grid-cols-1  rounded-2xl h-72 md:h-60 px-4 text-sm py-10 font-montserrat  gap-y-4 bg-gradient-to-b from-[#151515] to-gray-800">
-              <div className="text-justify">
-              {review}
+          <div className="grid grid-cols-1 overflow-auto  rounded-2xl h-72 md:h-60 px-4 text-sm py-8 font-montserrat  gap-y-4 bg-gradient-to-b from-[#151515] to-gray-800">
+            <div className="text-justify">{review}</div>
+            <div className={`flex ${reviewImg?'justify-between items-center':'justify-end items-end'}`}>
+              {
+                reviewImg? 
+                <button
+                onClick={handleClick}
+                className={`w-52 h-10 font-roboto border-2 rounded-full text-white hover:text-[#FFCB05] hover:border-[#FFCB05]`}
+              >
+                View Image
+              </button>
+              :
+              <></>
+              }
+              <div className={`flex`}>
+                {Array.from({ length: rating }, (_, index) => (
+                  <AiFillStar key={index} className="text-[#FFCB15]" />
+                ))}
               </div>
-              <div className="flex justify-end items-end">
-                {
-                  Array.from({ length: rating }, (_, index) => (
-                    <AiFillStar key={index} className='text-[#FFCB15]' />
-                  ))
-                }
-              </div>
+            </div>
           </div>
         </div>
       ) : (

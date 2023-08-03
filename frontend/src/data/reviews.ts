@@ -1,3 +1,5 @@
+import rental14 from '@assets/imgs/rentals/bounce house and toddler waterslide.png'
+
 export const reviews = [
 
     {
@@ -5,6 +7,7 @@ export const reviews = [
     review:
       "Mike was great! Very easy to work with and accomodating. His company came as a recommendation from a friend and it was worth it. I always rented from a competitor and had a bad experience where they forgot the jump house for weeks on my lawn destroying the section it was on. (I'm that lawn snob). Not only was his pricing better, he accommodated me due to impending weather and still was able to drop off and pick up in reasonable time. He offered a discount to us as we are both front line hospital staff and wife is a nurse, I couldn't except it after he went out of his way to work around the weather. We have more videos than pictures, but the slide was like new and functioned perfectly. 5 out of 5, recommend. Support this local business, you won't regret it. (Neice in picture is 5ft tall for perspective)",
     rating: 5,
+    reviewImg:rental14
   },
   
   {

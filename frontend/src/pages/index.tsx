@@ -69,7 +69,7 @@ const Home: NextPageWithLayout = () => {
     null
   );
   const [isModalOpen, setIsModalOpen] = React.useState(false);
-  const [title, setTitle] = React.useState({ id: 0, title: "" });
+  const [title, setTitle] = React.useState("");
 
   React.useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -330,6 +330,10 @@ const Home: NextPageWithLayout = () => {
                       type={"review"}
                       review={value.review}
                       rating={value.rating}
+                      reviewImg={value.reviewImg}
+                      openModal={() => {
+                        openModal(value.reviewImg);
+                      }}
                     />
                   </div>
                 ))}
@@ -397,19 +401,22 @@ const Home: NextPageWithLayout = () => {
         </div>
       </div>
       <div>
-        <Modal isOpen={isModalOpen} scroll={true}>
+        <Modal isOpen={isModalOpen} scroll={false}>
           <div className="container" data-aos="fade">
             <div onClick={closeModal}>
               <p className="flex items-center font-montserrat text-sm cursor-pointer">
                 <FiArrowLeft size={20} className="text-[#FFCB05]" /> GO BACK
               </p>
             </div>
-            <div className="flex items-center justify-center my-3">
+            <div className="grid place-items-center">
+              <Image src={title} alt={"Review Image"} />
+            </div>
+            {/* <div className="flex items-center justify-center my-3">
               <h2 className="text-2xl text-[#FFCB05] border-b-2 mb-6 border-[#FFCB05] font-bold font-montserrat">
                 {title?.title}
               </h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-12">
+            </div> */}
+            {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-12">
               {eventDetail
                 .filter((val) =>
                   title.title === "All Events"
@@ -425,8 +432,8 @@ const Home: NextPageWithLayout = () => {
                     />
                   </div>
                 ))}
-            </div>
-            <div className="py-2 flex justify-center items-center">
+            </div> */}
+            {/* <div className="py-2 flex justify-center items-center">
               <iframe
                 src="https://api.leadconnectorhq.com/widget/form/ai1gyJlD8zQcumUrRque"
                 className="w-full h-[80vh] md:h-[50vh]  lg:h-[68vh]"
@@ -444,7 +451,7 @@ const Home: NextPageWithLayout = () => {
                 data-form-id="ai1gyJlD8zQcumUrRque"
                 title="Contact Form"
               ></iframe>
-            </div>
+            </div> */}
           </div>
         </Modal>
       </div>
