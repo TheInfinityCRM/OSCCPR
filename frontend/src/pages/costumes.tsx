@@ -113,7 +113,7 @@ const Costumes = () => {
       <div className="py-6 bg-black">
         <div className="container text-white">
           <div className="flex justify-center items-center mt-28" data-aos="fade">
-              <h1 className="border-2 md:border-4 rounded-md md:font-semibold px-4 md:px-8 py-3 md:py-6 text-2xl md:text-3xl lg:text-5xl font-montserrat">All Costume Characters cost $250/hour</h1>
+              <h1 className="border-2 md:border-4 rounded-md md:font-semibold px-4 md:px-8 py-3 md:py-6 text-2xl md:text-3xl lg:text-5xl font-montserrat">All Costume Characters cost $200/hour</h1>
           </div>
           {currentItems.map((value) => (
             <section id={value.href} key={value.id} className="my-24 lg:my-0" data-aos="fade">
