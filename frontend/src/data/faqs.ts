@@ -24,4 +24,9 @@ export const faqs = [
         question:'What does OSCCPR offer?',
         answer:'At Ocean State Costume Characters and Party Rentals, we specialize in providing professional costume characters, bounce houses, and ice luges to make your event exceptional. From enchanting characters to exciting inflatables and unique ice creations, our offerings focus on creating a truly memorable experience for your celebration.'
     },
+    {
+        id:6,
+        question:'Are the inflatable bounce houses / waterslides clean?',
+        answer:'Yes! Every one of our units are meticulously cleaned and disinfected after every use/rental. Contact us today to learn more about our cleaning process.'
+    },
 ]
