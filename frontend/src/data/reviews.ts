@@ -1,4 +1,4 @@
-import rental14 from '@assets/imgs/rentals/bounce house and toddler waterslide.png'
+import rental14 from '@assets/imgs/rentals/reviewpic.png'
 
 export const reviews = [
 
