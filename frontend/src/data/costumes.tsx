@@ -15,6 +15,10 @@ import batman03 from "@assets/imgs/costumeGallery/Batman03.png"
 
 import michealmyres01 from "@assets/imgs/costumeGallery/Michael Myres01.png"
 import michealmyres02 from "@assets/imgs/costumeGallery/Michael Myres02.png"
+import michealmyres03 from "@assets/imgs/costumeGallery/Michael Myres03.png"
+import michealmyres04 from "@assets/imgs/costumeGallery/Michael Myres04.png"
+import michealmyres05 from "@assets/imgs/costumeGallery/Michael Myres05.png"
+
 
 import jasonvoorhees01 from "@assets/imgs/costumeGallery/Jason Voorhees01.png"
 import jasonvoorhees02 from "@assets/imgs/costumeGallery/Jason Voorhees02.png"
@@ -146,6 +150,18 @@ export const costumes = [
       {
         id:2,
         img:michealmyres02
+      }
+            {
+        id:3,
+        img:michealmyres03
+      }
+            {
+        id:4,
+        img:michealmyres04
+      }
+            {
+        id:5,
+        img:michealmyres05
       }
     ]
   },
