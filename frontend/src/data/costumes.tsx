@@ -150,16 +150,16 @@ export const costumes = [
       {
         id:2,
         img:michealmyres02
-      }
-            {
+      },
+      {
         id:3,
         img:michealmyres03
-      }
-            {
+      },
+      {
         id:4,
         img:michealmyres04
-      }
-            {
+      },
+      {
         id:5,
         img:michealmyres05
       }
