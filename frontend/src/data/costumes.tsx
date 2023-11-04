@@ -15,9 +15,9 @@ import batman03 from "@assets/imgs/costumeGallery/Batman03.png"
 
 import michealmyres01 from "@assets/imgs/costumeGallery/Michael Myres01.png"
 import michealmyres02 from "@assets/imgs/costumeGallery/Michael Myres02.png"
-import michealmyres03 from "@assets/imgs/costumeGallery/Michael Myres03.png"
-import michealmyres04 from "@assets/imgs/costumeGallery/Michael Myres04.png"
-import michealmyres05 from "@assets/imgs/costumeGallery/Michael Myres05.png"
+import michealmyres03 from "@assets/imgs/costumeGallery/Micheal Myres03.png"
+import michealmyres04 from "@assets/imgs/costumeGallery/Micheal Myres04.png"
+import michealmyres05 from "@assets/imgs/costumeGallery/Micheal Myres05.png"
 
 
 import jasonvoorhees01 from "@assets/imgs/costumeGallery/Jason Voorhees01.png"
