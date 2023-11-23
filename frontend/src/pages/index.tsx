@@ -382,7 +382,7 @@ const Home: NextPageWithLayout = () => {
                 type="contact"
                 icon={<FiPhone size={40} />}
                 item={"Call Us"}
-                contact={"401 - 206 - 6294"}
+                contact={"401 - 200 - 4423"}
               />
               <Card
                 type="contact"
