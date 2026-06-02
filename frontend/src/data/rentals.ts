@@ -42,7 +42,8 @@ export const rentalItems = [
         weekendRental:'$650.00',
         dimensions:"25' long, 9' wide, 15' tall",
         bookingImg:rental01Booking,
-        detailUrl:
+
+        
         category:category.Normal,
         status:status.Available   
     },
