@@ -372,7 +372,6 @@ const Home: NextPageWithLayout = () => {
 
 
 
-
               
             </div>
             <div
