@@ -359,7 +359,23 @@ const Home: NextPageWithLayout = () => {
 
 
 
-
+ <iframe
+                src="https://api.leadconnectorhq.com/widget/form/ai1gyJlD8zQcumUrRque"
+                className="w-full h-[80vh] md:h-[50vh]  lg:h-[68vh] text-white"
+                id="inline-ai1gyJlD8zQcumUrRque"
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="Contact Form"
+                data-height="567"
+                data-layout-iframe-id="inline-ai1gyJlD8zQcumUrRque"
+                data-form-id="ai1gyJlD8zQcumUrRque"
+                title="Contact Form"
+              ></iframe>
 
 
 
