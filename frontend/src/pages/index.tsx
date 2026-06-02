@@ -346,27 +346,26 @@ const Home: NextPageWithLayout = () => {
               data-aos="fade"
             >
               <Heading title="Get in touch..." />
-            </div>
-            <div className="flex justify-center items-center" data-aos="fade">
-              <h3 className="text-white text-lg text-center md:text-2xl font-montserrat font-semibold">
-                Fill out this form to inquire about out services!
-              </h3>
-            </div>
-            <div
+
+
+
+
+
+
+
+
+
+
+              
+
+
+
+
+
+              
               className="py-2 flex justify-center items-center"
               data-aos="fade"
             >
-
-
-
-
-            
-
-
-
-
-
-
 
 
 
