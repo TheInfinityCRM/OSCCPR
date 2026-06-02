@@ -356,23 +356,23 @@ const Home: NextPageWithLayout = () => {
               className="py-2 flex justify-center items-center"
               data-aos="fade"
             >
-              <iframe
-                src="https://api.leadconnectorhq.com/widget/form/ai1gyJlD8zQcumUrRque"
-                className="w-full h-[80vh] md:h-[50vh]  lg:h-[68vh] text-white"
-                id="inline-ai1gyJlD8zQcumUrRque"
-                data-layout="{'id':'INLINE'}"
-                data-trigger-type="alwaysShow"
-                data-trigger-value=""
-                data-activation-type="alwaysActivated"
-                data-activation-value=""
-                data-deactivation-type="neverDeactivate"
-                data-deactivation-value=""
-                data-form-name="Contact Form"
-                data-height="567"
-                data-layout-iframe-id="inline-ai1gyJlD8zQcumUrRque"
-                data-form-id="ai1gyJlD8zQcumUrRque"
-                title="Contact Form"
-              ></iframe>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              
             </div>
             <div
               className="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-6"
